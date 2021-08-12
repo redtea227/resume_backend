@@ -28,7 +28,17 @@
           <div class="login">
             <a class="navbar-brand" href="#">Roger Lo
             </a>
-            <a href="login.php">登入</a>
+            <?php
+            if (!isset($_SESSION['admin'])) {
+            ?>
+              <a href="login.php">登入</a>
+            <?php
+            } else {
+            ?>
+              <a href="api/logout.php">登出</a>
+            <?php
+            }
+            ?>
           </div>
           <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNavAltMarkup">
             <i class="fas fa-bars"></i>
