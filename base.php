@@ -41,9 +41,9 @@ $hs=[
         "admin"=>"管理者帳號"
     ]; 
 class DB{
-    private $dsn="mysql:host=localhost;charset=utf8;dbname=resume";
-    private $root='root';
-    private $password='12345';
+    private $dsn="mysql:host=localhost;charset=utf8;dbname=s1100217";
+    private $root='s1100217';
+    private $password='s1100217';
     private $table;
     private $pdo;
 

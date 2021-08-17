@@ -60,7 +60,7 @@ if (!isset($_SESSION['admin'])) {
             <a href="?do=total" class="btn btn-secondary text-decoration-none">進站總人數管理</a>
             <a href="?do=icon" class="btn btn-secondary text-decoration-none">Icon</a>
             <a href="?do=admin" class="btn btn-secondary text-decoration-none">管理者帳號管理</a>
-            <a href="index.php" class="btn btn-outline-info text-decoration-none">返回前台</a>
+            <a href="index.php" class="btn btn-secondary text-warning text-decoration-none">返回前台</a>
           </div>
         </div>
         <div class="dbor" style="margin:3px; width:95%; height:11%; line-height:45px;">
@@ -72,8 +72,8 @@ if (!isset($_SESSION['admin'])) {
         <table width="100%">
           <tbody>
             <tr>
-              <td style="width:90%;font-weight:800;" class="text-center border-1">後台管理區</td>
-              <td><button onclick="location.replace(&#39;api/logout.php&#39;)" style="width:99%; margin-right:2px; height:50px;" class="btn btn-outline-warning fw-bold">管理登出</button></td>
+              <td style="width:90%;" class="text-center border-1 fw-bold">後台管理區</td>
+              <td><button onclick="location.replace(&#39;api/logout.php&#39;)" style="width:99%; margin-right:2px; height:50px;" class="btn btn-outline-danger fw-bold">管理登出</button></td>
             </tr>
           </tbody>
         </table>
