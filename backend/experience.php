@@ -1,10 +1,10 @@
-<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-  <p class="t cent botli"><?= $ts[$do]; ?></p>
+<div style="width:99%; margin:10px auto;">
+  <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table width="100%" class="cent">
+    <table width="100%" class="table table-bordered  table-striped text-center">
       <tbody>
-        <tr class="yel">
+        <tr>
           <td>經驗</td>
           <td>公司</td>
           <td>時間</td>
@@ -26,7 +26,7 @@
           <tr>
 
             <td>
-              <input type="text" name="name[]" value="<?= $value['name']; ?>">
+              <input type="text" name="name[]" value="<?= $value['name']; ?>" >
             </td>
             <td>
               <input type="text" name="company[]" value="<?= $value['company']; ?>">
@@ -35,7 +35,7 @@
               <input type="text" name="time[]" value="<?= $value['time']; ?>" style="width:100px">
             </td>
             <td>
-              <textarea name="content[]" style="width:300px;height:80px;"><?= $value['content']; ?></textarea>
+              <textarea name="content[]" style="width:450px;height:80px;"><?= $value['content']; ?></textarea>
             </td>
             <td>
               <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
@@ -51,7 +51,7 @@
         ?>
       </tbody>
     </table>
-    <div class="cent">
+    <div class="text-center">
       <?php
       if (($now - 1) > 0) {
         echo "<a href='?do=experience&p=" . ($now - 1) . "'> < </a>";
@@ -75,7 +75,7 @@
           <td width="200px">
             <input type="button" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
           </td>
-          <td class="cent">
+          <td class="text-center">
             <input type="submit" value="修改確定">
             <input type="reset" value="重置">
             <input type="hidden" name="table" value="<?= $do; ?>">

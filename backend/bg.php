@@ -1,10 +1,10 @@
-<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli"><?=$ts[$do];?></p>
+<div style="width:99%; margin:10px auto;">
+    <h4 class="text-center p-2"><?=$ts[$do];?></h4>
     
     <form method="post" action="api/edit.php">
-        <table width="100%" class='cent'>
+        <table width="100%" class='table table-bordered  table-striped text-center'>
             <tbody>
-                <tr class="yel">
+                <tr>
                     <td width="45%">網站標題</td>
                     <td width="23%">替代文字</td>
                     <td width="7%">顯示</td>
@@ -48,7 +48,7 @@
                             onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?=$do;?>.php&#39;)" 
                               value="<?=$as[$do];?>">
                     </td>
-                    <td class="cent">
+                    <td class="text-center">
                         <input type="submit" value="修改確定">
                         <input type="reset" value="重置">
                         <input type="hidden" name="table" value="<?=$do;?>">

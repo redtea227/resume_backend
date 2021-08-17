@@ -21,6 +21,7 @@ foreach ($ids as $key => $id) {
         break;
       case 'intro';
         $row['sh'] = (isset($_POST['sh']) && $_POST['sh'] == $id) ? 1 : 0;
+        $row['text'] = $_POST['text'][$key];
         break;
       case 'photo';
         $row['sh'] = (isset($_POST['sh']) && $_POST['sh'] == $id) ? 1 : 0;

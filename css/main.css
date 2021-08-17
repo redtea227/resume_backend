@@ -15,9 +15,21 @@
   padding: 5rem!important;
 }
 
-.bg-custom{
-  background: #dbfbff;
+
+
+#rogerMenu{
+    background: rgb(204, 238, 255, 0.3);
+    box-shadow: 0 5px 45px rgb(0 0 0 / 10%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
 }
+/* 
+.bg-custom{
+  background: rgb(204, 238, 255, 0.3);
+} */
 
 .resume-container .shadow-1-strong{
   border-radius: 5px;

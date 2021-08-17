@@ -81,3 +81,4 @@ $.get('api/typewriter.php', (res) => {
     .start();
 
 }, 'JSON')
+

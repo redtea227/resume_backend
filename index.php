@@ -35,6 +35,7 @@
             <?php
             } else {
             ?>
+              <a href="backend.php">後台管理</a>&nbsp&nbsp&nbsp
               <a href="api/logout.php">登出</a>
             <?php
             }
@@ -176,57 +177,6 @@
               <?php
               }
               ?>
-              <!-- <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
-                <div class="timeline-head px-4 pt-3">
-                  <div class="h5">泰山職訓局 <span class="text-muted h6"></span></div>
-                </div>
-                <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2021 - Present</div>
-                  <div>User generated content in real-time will have multiple touchpoints for offshoring. Organically
-                    grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</div>
-                </div>
-              </div>
-              <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="100">
-                <div class="timeline-head px-4 pt-3">
-                  <div class="h5">導遊 <span class="text-muted h6">at YOLO Taiwan</span></div>
-                </div>
-                <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2018 - 2020</div>
-                  <div>User generated content in real-time will have multiple touchpoints for offshoring. Organically
-                    grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</div>
-                </div>
-              </div>
-              <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="200">
-                <div class="timeline-head px-4 pt-3">
-                  <div class="h5">遊學 <span class="text-muted h6">at Australia and Philippine</span></div>
-                </div>
-                <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2016 - 2018</div>
-                  <div>User generated content in real-time will have multiple touchpoints for offshoring. Organically
-                    grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</div>
-                </div>
-              </div>
-              <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="300">
-                <div class="timeline-head px-4 pt-3">
-                  <div class="h5">應用工程師 <span class="text-muted h6">at 益登科技</span></div>
-                </div>
-                <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2014 - 2016</div>
-                  <div>Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion
-                    along the information highway will close the loop on focusing solely on the bottom line.</div>
-                </div>
-              </div>
-              <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="400">
-                <div class="timeline-head px-4 pt-3">
-                  <div class="h5">國立東華大學材料科學與工程學系畢業 <span class="text-muted h6"></span></div>
-                </div>
-                <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2009 - 2013</div>
-                  <div>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
-                    approaches to corporate strategy foster collaborative thinking to further the overall value
-                    proposition.</div>
-                </div>
-              </div> -->
             </div>
           </div>
         </div>
@@ -338,20 +288,21 @@
                     redtea227@hotmail.com</div>
                 </div>
                 <div class="mt-5">
-                  <form action="https://formspree.io/your@email.com" method="POST">
+                  <form id="my-form" action="https://formspree.io/f/mwkawvgy" method="POST">
                     <div class="form-outline mb-4">
-                      <input type="text" id="name" class="form-control" required />
+                      <input type="text" name="name" id="name" class="form-control" required />
                       <label class="form-label" for="name">Name</label>
                     </div>
                     <div class="form-outline mb-4">
-                      <input type="email" id="email" class="form-control" required />
+                      <input type="email" name="email" id="email" class="form-control" required />
                       <label class="form-label" for="email">Email address</label>
                     </div>
                     <div class="form-outline mb-4">
-                      <textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
+                      <textarea class="form-control" name="message" style="resize: none;" id="message" rows="4" required></textarea>
                       <label class="form-label" for="message">Message</label>
                     </div>
-                    <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
+                    <button id="my-form-button" class="btn btn-info btn-block mb-4" type="submit">Submit</button>
+                    <p id="my-form-status"></p>
                   </form>
                 </div>
               </div>
@@ -391,7 +342,8 @@
     </div>
     <div id="rogerArrow" class="position-fixed">
       <a href="#" class="btn-i">
-        <i class="fab fa-btc fa-3x"></i>
+        <!-- <i class="fab fa-btc fa-3x"></i> -->
+        <i class="fas fa-arrow-up fa-3x"></i>
       </a>
     </div>
   </footer>
@@ -402,9 +354,26 @@
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="scripts/main.js?ver=1.2.1"></script>
   <script>
-    $('#portfolio .nav-link').on("click", myFunction);
+    var form = document.getElementById("my-form");
 
-    function myFunction() {}
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
   </script>
 </body>
 
