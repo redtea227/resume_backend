@@ -1,8 +1,8 @@
-<div style="width:99%; margin:10px auto;">
+<div class="mt-4">
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table width="100%" class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center">
       <tbody>
         <tr>
           <td>技能</td>
@@ -32,10 +32,26 @@
               <input type="text" name="level[]" value="<?= $value['level']; ?>" class="text-center" class="text-center">
             </td>
             <td>
-              <input type="text" name="width[]" value="<?= $value['width']; ?>" style="width:100px" class="text-center">
+              <select name="width[]">
+                <option value="<?= $value['width']; ?>"><?= $value['width']; ?></option>
+                <option value="90%">90%</option>
+                <option value="80%">80%</option>
+                <option value="70%">70%</option>
+              </select>
+              <!-- <input type="text" name="width[]" value="<?= $value['width']; ?>" style="width:100px" class="text-center"> -->
             </td>
             <td>
-              <input type="text" name="color[]" value="<?= $value['color']; ?>" class="text-center">
+              <select name="color[]">
+                <option value="<?= $value['color']; ?>"><?= $value['color']; ?></option>
+                <option value="bg-primary">bg-primary</option>
+                <option value="bg-secondary">bg-secondary</option>
+                <option value="bg-success">bg-success</option>
+                <option value="bg-danger">bg-danger</option>
+                <option value="bg-warning">bg-warning</option>
+                <option value="bg-info">bg-info</option>
+                <option value="bg-dark">bg-dark</option>
+              </select>
+              <!-- <input type="text" name="color[]" value="<?= $value['color']; ?>" class="text-center"> -->
             </td>
             <td>
               <select name="position[]" style="width:100px">
@@ -76,15 +92,15 @@
 
       ?>
     </div>
-    <table style="margin-top:40px; width:70%;">
+    <table style="margin-top:20px; width:80%;">
       <tbody>
         <tr>
           <td width="200px">
-            <input type="button" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
+            <input type="button"  class="btn btn-success" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
           </td>
           <td class="text-center">
-            <input type="submit" value="修改確定">
-            <input type="reset" value="重置">
+            <input type="submit" value="修改確定" class="btn btn-success">
+            <input type="reset" value="重置" class="btn btn-success">
             <input type="hidden" name="table" value="<?= $do; ?>">
           </td>
         </tr>

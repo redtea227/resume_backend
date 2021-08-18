@@ -1,8 +1,8 @@
-<div style="width:99%; margin:10px auto;">
+<div class="mt-4">
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table width="100%" class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center">
       <tbody>
         <tr>
           <td>經驗</td>
@@ -35,7 +35,7 @@
               <input type="text" name="time[]" value="<?= $value['time']; ?>" style="width:100px">
             </td>
             <td>
-              <textarea name="content[]" style="width:450px;height:90px;"><?= $value['content']; ?></textarea>
+              <textarea name="content[]" style="width:400px;height:90px;"><?= $value['content']; ?></textarea>
             </td>
             <td>
               <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
@@ -69,15 +69,15 @@
       ?>
     </div>
 
-    <table style="margin-top:40px; width:70%;">
+    <table style="margin-top:20px; width:80%;">
       <tbody>
         <tr>
           <td width="200px">
-            <input type="button" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
+            <input type="button" class="btn btn-success" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
           </td>
           <td class="text-center">
-            <input type="submit" value="修改確定">
-            <input type="reset" value="重置">
+            <input type="submit" value="修改確定" class="btn btn-success">
+            <input type="reset" value="重置" class="btn btn-success">
             <input type="hidden" name="table" value="<?= $do; ?>">
           </td>
         </tr>

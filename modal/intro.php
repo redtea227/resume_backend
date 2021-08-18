@@ -1,10 +1,10 @@
 <?php include_once "../base.php";?>
 
-<h3 class='text-center'><?=$as['intro'];?></h3>
+<h3 class='text-center mt-3'><?=$as['intro'];?></h3>
 <hr>
 
 <form action="api/add.php" method="post" enctype="multipart/form-data">
-<table style="margin:auto;">
+<table class="m-auto">
 
     <tr>
         <td><?=$hs['intro'];?>：</td>

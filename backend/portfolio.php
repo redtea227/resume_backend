@@ -1,8 +1,8 @@
-<div style="width:99%; margin:10px auto;">
+<div class="mt-4">
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table width="100%" class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center">
       <tbody>
         <tr>
           <td>作品圖</td>
@@ -26,12 +26,12 @@
         ?>
           <tr>
             <td>
-              <img src="img/<?= $value['img']; ?>" style="width:100px;height:68px;">
+              <img src="img/<?= $value['img']; ?>" style="width:120px;height:80px;">
             </td>
             <td>
               <select name="type[]" style="width:100px">
                 <option value="<?= $value['type']; ?>"><?= $value['type']; ?></option>
-                <option value="fronted">fronted</option>
+                <option value="frontend">frontend</option>
                 <option value="backend">backend</option>
                 <option value="photo">photo</option>
               </select>
@@ -41,7 +41,8 @@
               <input type="text" name="subject[]" value="<?= $value['subject']; ?>">
             </td>
             <td>
-              <input type="text" name="text[]" value="<?= $value['text']; ?>">
+              <textarea name="text[]" style="width: 100%;height: 80px"><?= $value['text']; ?></textarea>
+              <!-- <input type="text" name="text[]" value="<?= $value['text']; ?>"> -->
             </td>
             <td>
               <input type="text" name="href[]" value="<?= $value['href']; ?>">
@@ -53,7 +54,7 @@
               <input type="checkbox" name="del[]" value="<?= $value['id']; ?>">
             </td>
             <td>
-              <input type="button" value="更換圖片" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/portfolio_update.php?id=<?= $value['id']; ?>&#39;)">
+              <input type="button" class="btn btn-outline-success" value="更換圖片" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/portfolio_update.php?id=<?= $value['id']; ?>&#39;)">
             </td>
             <input type="hidden" name="id[]" value="<?= $value['id']; ?>">
           </tr>
@@ -79,15 +80,15 @@
 
       ?>
     </div>
-    <table style="margin-top:40px; width:70%;">
+    <table style="margin-top:20px; width:80%;">
       <tbody>
         <tr>
           <td width="200px">
-            <input type="button" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
+            <input type="button" class="btn btn-success" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
           </td>
           <td class="text-center">
-            <input type="submit" value="修改確定">
-            <input type="reset" value="重置">
+            <input type="submit" value="修改確定" class="btn btn-success">
+            <input type="reset" value="重置" class="btn btn-success">
             <input type="hidden" name="table" value="<?= $do; ?>">
           </td>
         </tr>

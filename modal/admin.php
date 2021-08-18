@@ -1,20 +1,20 @@
 <?php include_once "../base.php";?>
 
-<h3 class='text-center'><?=$as['admin'];?></h3>
+<h3 class="text-center mt-3"><?=$as['admin'];?></h3>
 <hr>
 
 <form action="api/add.php" method="post" enctype="multipart/form-data">
-<table style="margin:auto;">
+<table class="m-auto">
     <tr>
-        <td style="text-align:right">帳號：</td>
+        <td class="text-end">帳號：</td>
         <td><input type="text" name="acc"></td>
     </tr>
     <tr>
-        <td style="text-align:right">密碼：</td>
+        <td class="text-end">密碼：</td>
         <td><input type="password" name="pw"></td>
     </tr>
     <tr>
-        <td style="text-align:right">確認密碼：</td>
+        <td class="text-end">確認密碼：</td>
         <td><input type="password" name="pw2"></td>
     </tr>
 </table>

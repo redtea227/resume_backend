@@ -1,13 +1,13 @@
 <?php include_once "../base.php";?>
 
-<h3 class='text-center'>更換作品集圖片</h3>
+<h3 class='text-center mt-3'>更換作品集圖片</h3>
 <hr>
 
 <form action="api/upload.php" method="post" enctype="multipart/form-data">
-<table style="margin:auto;">
+<table class="m-auto">
     <tr>
-        <td style="text-align:right"><?=$hs['portfolio'];?>：</td>
-        <td style="text-align:right"><input type="file" name="img"></td>
+        <td class="text-end"><?=$hs['portfolio'];?>：</td>
+        <td class="text-end"><input type="file" name="img"></td>
     </tr>
 </table>
 <div class="text-center">

@@ -1,24 +1,24 @@
 <?php include_once "../base.php"; ?>
 
-<h3 class='text-center'><?= $as['experience']; ?></h3>
+<h3 class='text-center mt-3'><?= $as['experience']; ?></h3>
 <hr>
 
 <form action="api/add.php" method="post" enctype="multipart/form-data">
-  <table style="margin:auto;">
+  <table class="m-auto">
     <tr>
-      <td style="text-align:right">經歷 : </td>
-      <td style="text-align:left"><input type="text" name="name" class="w-100"></td>
+      <td class="text-end">經歷 : </td>
+      <td class="text-start"><input type="text" name="name" class="w-100"></td>
     </tr>
     <tr>
-      <td style="text-align:right">公司 : </td>
-      <td style="text-align:left"><input type="text" name="company" class="w-100"></td>
+      <td class="text-end">公司 : </td>
+      <td class="text-start"><input type="text" name="company" class="w-100"></td>
     </tr>
     <tr>
-      <td style="text-align:right">時間 : </td>
-      <td style="text-align:left"><input type="text" name="time" class="w-100"></td>
+      <td class="text-end">時間 : </td>
+      <td class="text-start"><input type="text" name="time" class="w-100"></td>
     </tr>
     <tr>
-      <td style="text-align:right">內容 : </td>
+      <td class="text-end">內容 : </td>
       <td>
       <textarea name="content" style="width:300px;height:200px"></textarea>
       <!-- <input type="text" name="content"> -->

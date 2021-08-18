@@ -19,24 +19,24 @@
 
 </head>
 
-<body class="bg-light" id="top">
+<body id="top">
   <!-- header_nav -->
   <header class="fixed-top" id="rogerMenu">
     <div class="text-center text-lg-left">
       <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
-          <div class="login">
+          <div class="login" style="width: 300px;">
             <a class="navbar-brand" href="#">Roger Lo
             </a>
             <?php
             if (!isset($_SESSION['admin'])) {
             ?>
-              <a href="login.php">登入</a>
+              <a href="login.php" class="btn btn-outline-warning">登入</a>
             <?php
             } else {
             ?>
-              <a href="backend.php">後台管理</a>&nbsp&nbsp&nbsp
-              <a href="api/logout.php">登出</a>
+              <a href="backend.php" class="btn btn-outline-warning">後台管理</a>&nbsp&nbsp&nbsp
+              <a href="api/logout.php" class="btn btn-outline-warning">登出</a>
             <?php
             }
             ?>
@@ -73,7 +73,7 @@
       <div class="resume-container">
         <div class="shadow-1-strong bg-white my-custom" id="intro">
           <div class="text-white">
-            <div class="cover bg-image"><img src="img/<?= $Bg->find(['sh' => 1])['img']; ?>" />
+            <div class="cover bg-image"><img src="img/<?= $Bg->find(['sh' => 1])['img']; ?>" alt="<?= $Bg->find(['sh' => 1])['text']; ?>">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);backdrop-filter: blur(2px);">
                 <div class="text-center pad-5">
                   <div class="avatar p-1">
@@ -188,13 +188,13 @@
             <!-- Pills navs -->
             <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="ex1">
               <li class="nav-item">
-                <a class="nav-link active" id="ex1-tab-1" data-mdb-toggle="pill" href="#frontend">前端</a>
+                <a class="nav-link active fs-6" id="ex1-tab-1" data-mdb-toggle="pill" href="#frontend">前端</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="pill" href="#backend">後端</a>
+                <a class="nav-link fs-6" id="ex1-tab-2" data-mdb-toggle="pill" href="#backend">後端</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="pill" href="#photo">繪圖</a>
+                <a class="nav-link fs-6" id="ex1-tab-3" data-mdb-toggle="pill" href="#photo">繪圖</a>
               </li>
             </ul>
             <!-- Pills navs -->
