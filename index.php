@@ -75,7 +75,7 @@
           <div class="text-white">
             <div class="cover bg-image"><img src="img/<?= $Bg->find(['sh' => 1])['img']; ?>" alt="<?= $Bg->find(['sh' => 1])['text']; ?>">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);backdrop-filter: blur(2px);">
-                <div class="text-center pad-5">
+                <div class="text-center p-5">
                   <div class="avatar p-1">
                     <img class="img-thumbnail shadow-2-strong" src="img/<?= $Photo->find(['sh' => 1])['img']; ?>">
                   </div>

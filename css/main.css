@@ -11,12 +11,6 @@
   align-items: center;
 }
 
-.pad-5{
-  padding: 5rem!important;
-}
-
-
-
 #rogerMenu{
     background: rgb(204, 238, 255, 0.3);
     box-shadow: 0 5px 45px rgb(0 0 0 / 10%);
