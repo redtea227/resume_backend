@@ -21,7 +21,7 @@
                         <img src="img/<?=$value['img'];?>" style="width:300px;height:200px;">
                     </td>
                     <td width="23%">
-                        <input type="text" name='text[]' value="<?=$value['text'];?>">
+                        <input type="text" name='text[]' value="<?=$value['text'];?>" class="text-center">
                     </td>
                     <td width="7%">
                         <input type="radio" name="sh" value="<?=$value['id'];?>" <?=($value['sh']==1)?"checked":"";?>>

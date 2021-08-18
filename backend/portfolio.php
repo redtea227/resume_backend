@@ -29,7 +29,13 @@
               <img src="img/<?= $value['img']; ?>" style="width:100px;height:68px;">
             </td>
             <td>
-              <input type="text" name="type[]" value="<?= $value['type']; ?>" style="width:100px">
+              <select name="type[]" style="width:100px">
+                <option value="<?= $value['type']; ?>"><?= $value['type']; ?></option>
+                <option value="fronted">fronted</option>
+                <option value="backend">backend</option>
+                <option value="photo">photo</option>
+              </select>
+              <!-- <input type="text" name="type[]" value="<?= $value['type']; ?>" style="width:100px"> -->
             </td>
             <td>
               <input type="text" name="subject[]" value="<?= $value['subject']; ?>">

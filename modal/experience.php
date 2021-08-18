@@ -6,20 +6,23 @@
 <form action="api/add.php" method="post" enctype="multipart/form-data">
   <table style="margin:auto;">
     <tr>
-      <td style="text-align:right">經驗 : </td>
-      <td style="text-align:right"><input type="text" name="name"></td>
+      <td style="text-align:right">經歷 : </td>
+      <td style="text-align:left"><input type="text" name="name" class="w-100"></td>
     </tr>
     <tr>
       <td style="text-align:right">公司 : </td>
-      <td style="text-align:right"><input type="text" name="company"></td>
+      <td style="text-align:left"><input type="text" name="company" class="w-100"></td>
     </tr>
     <tr>
       <td style="text-align:right">時間 : </td>
-      <td style="text-align:right"><input type="text" name="time"></td>
+      <td style="text-align:left"><input type="text" name="time" class="w-100"></td>
     </tr>
     <tr>
       <td style="text-align:right">內容 : </td>
-      <td style="text-align:right"><input type="text" name="content"></td>
+      <td>
+      <textarea name="content" style="width:300px;height:200px"></textarea>
+      <!-- <input type="text" name="content"> -->
+    </td>
     </tr>
   </table>
   <div class="text-center">

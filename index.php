@@ -181,6 +181,7 @@
           </div>
         </div>
 
+        <!-- portfolio -->
         <div class="shadow-1-strong bg-white my-5 p-5" id="portfolio">
           <div class="portfolio-section">
             <h2 class="h2 fw-light mb-4">Portfolio</h2>

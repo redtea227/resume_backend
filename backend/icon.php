@@ -22,10 +22,10 @@
               <i class="<?= $value['class']; ?>">
             </td>
             <td>
-              <input type="text" name="name[]" value="<?= $value['name']; ?>" style="width:100%">
+              <input type="text" name="name[]" value="<?= $value['name']; ?>">
             </td>
             <td>
-              <input type="text" name="class[]" value="<?= $value['class']; ?>" style="width:100%">
+              <input type="text" name="class[]" value="<?= $value['class']; ?>">
             </td>
             <td>
               <input type="text" name="href[]" value="<?= $value['href']; ?>" style="width:100%">

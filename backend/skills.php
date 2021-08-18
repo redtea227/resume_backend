@@ -8,8 +8,8 @@
           <td>技能</td>
           <td>level</td>
           <td>width</td>
-          <td>顏色</td>
-          <td>位置</td>
+          <td>color (boostrap5)</td>
+          <td>position</td>
           <td>顯示</td>
           <td>刪除</td>
         </tr>
@@ -26,19 +26,24 @@
           <tr>
 
             <td>
-              <input type="text" name="name[]" value="<?= $value['name']; ?>" style="width:150px">
+              <input type="text" name="name[]" value="<?= $value['name']; ?>" style="width:200px" class="text-center">
             </td>
             <td>
-              <input type="text" name="level[]" value="<?= $value['level']; ?>">
+              <input type="text" name="level[]" value="<?= $value['level']; ?>" class="text-center" class="text-center">
             </td>
             <td>
-              <input type="text" name="width[]" value="<?= $value['width']; ?>" style="width:100px">
+              <input type="text" name="width[]" value="<?= $value['width']; ?>" style="width:100px" class="text-center">
             </td>
             <td>
-              <input type="text" name="color[]" value="<?= $value['color']; ?>">
+              <input type="text" name="color[]" value="<?= $value['color']; ?>" class="text-center">
             </td>
             <td>
-              <input type="text" name="position[]" value="<?= $value['position']; ?>" style="width:100px">
+              <select name="position[]" style="width:100px">
+                <option value="<?= $value['position']; ?>"><?= $value['position']; ?></option>
+                <option value="left">left</option>
+                <option value="right">right</option>
+              </select>
+              <!-- <input type="text" name="position[]" value="<?= $value['position']; ?>" style="width:100px"> -->
             </td>
             <td>
               <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>

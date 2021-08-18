@@ -19,7 +19,13 @@
     </tr>
     <tr>
       <td style="text-align:right">position : </td>
-      <td style="text-align:right"><input type="text" name="position"></td>
+      <td style="text-align:right">
+        <select name="position" style="width:100%">
+          <option value="left">left</option>
+          <option value="right">right</option>
+        </select>
+        <!-- <input type="text" name="position"> -->
+      </td>
     </tr>
     <tr>
       <td style="text-align:right">color : </td>

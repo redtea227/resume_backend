@@ -5,9 +5,9 @@
     <table width="100%" class="table table-bordered  table-striped text-center">
       <tbody>
         <tr>
-          <td width="80%">自我介紹</td>
-          <td width="10%">顯示</td>
-          <td width="10%">刪除</td>
+          <td width="90%">自我介紹</td>
+          <td width="5%">顯示</td>
+          <td width="5%">刪除</td>
         </tr>
 
         <?php
@@ -18,7 +18,7 @@
           <tr>
 
             <td>
-              <textarea name="text[]" style="width:90%;height:200px;"><?= $value['text']; ?></textarea>
+              <textarea name="text[]" style="width:90%;height:250px;"><?= $value['text']; ?></textarea>
             </td>
             <td>
               <input type="checkbox" name="sh" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>

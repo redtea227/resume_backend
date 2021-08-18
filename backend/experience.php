@@ -35,7 +35,7 @@
               <input type="text" name="time[]" value="<?= $value['time']; ?>" style="width:100px">
             </td>
             <td>
-              <textarea name="content[]" style="width:450px;height:80px;"><?= $value['content']; ?></textarea>
+              <textarea name="content[]" style="width:450px;height:90px;"><?= $value['content']; ?></textarea>
             </td>
             <td>
               <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>

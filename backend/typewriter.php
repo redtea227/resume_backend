@@ -7,7 +7,7 @@
         <tr>
           <td>名言</td>
           <td>名字</td>
-          <td>職位</td>
+          <td>職稱</td>
           <td>顯示</td>
           <td>刪除</td>
         </tr>
