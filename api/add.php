@@ -34,7 +34,8 @@ if(isset($_FILES['img']['tmp_name'])){
           $data['type']=$_POST['type'];
           $data['subject']=$_POST['subject'];
           $data['text']=$_POST['text'];
-          $data['href']=$_POST['href'];
+          $data['href1']=$_POST['href1'];
+          $data['href2']=$_POST['href2'];
           $data['sh']=0;
         break;
         case "typewriter":

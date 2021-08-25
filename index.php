@@ -211,7 +211,8 @@
                       <div class="card h-100">
                         <img src="img/<?= $value['img']; ?>" class="card-img-top" alt="...">
                         <div class="view">
-                          <a href="<?= $value['href']; ?>" target="_blank" class="btn btn-primary">view</a>
+                          <a href="<?= $value['href1']; ?>" target="_blank" class="me-5"><i class="fas fa-link fa-2x" data-mdb-toggle="tooltip" title="DEMO"></i></a>
+                          <a href="<?= $value['href2']; ?>" target="_blank"><i class="fab fa-github fa-2x" data-mdb-toggle="tooltip" title="GITHUB"></i></a>
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"><?= $value['subject']; ?></h5>
@@ -234,7 +235,8 @@
                       <div class="card h-100">
                         <img src="img/<?= $value['img']; ?>" class="card-img-top" alt="...">
                         <div class="view">
-                          <a href="<?= $value['href']; ?>" target="_blank" class="btn btn-primary">view</a>
+                          <a href="<?= $value['href1']; ?>" target="_blank" class="me-5"><i class="fas fa-link fa-2x" data-mdb-toggle="tooltip" title="DEMO"></i></a>
+                          <a href="<?= $value['href2']; ?>" target="_blank"><i class="fab fa-github fa-2x" data-mdb-toggle="tooltip" title="GITHUB"></i></a>
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"><?= $value['subject']; ?></h5>
@@ -257,7 +259,8 @@
                       <div class="card h-100">
                         <img src="img/<?= $value['img']; ?>" class="card-img-top" alt="...">
                         <div class="view">
-                          <a href="<?= $value['href']; ?>" target="_blank" class="btn btn-primary">view</a>
+                          <a href="<?= $value['href1']; ?>" target="_blank" class="me-5"><i class="fas fa-link fa-2x" data-mdb-toggle="tooltip" title="DEMO"></i></a>
+                          <a href="<?= $value['href2']; ?>" target="_blank"><i class="fab fa-github fa-2x" data-mdb-toggle="tooltip" title="GITHUB"></i></a>
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"><?= $value['subject']; ?></h5>

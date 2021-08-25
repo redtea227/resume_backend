@@ -26,22 +26,22 @@
           <tr>
 
             <td>
-              <input type="text" name="name[]" value="<?= $value['name']; ?>" >
+              <input type="text" name="name[]" value="<?= $value['name']; ?>" class="mt-4">
             </td>
             <td>
-              <input type="text" name="company[]" value="<?= $value['company']; ?>">
+              <input type="text" name="company[]" value="<?= $value['company']; ?>" class="mt-4">
             </td>
             <td>
-              <input type="text" name="time[]" value="<?= $value['time']; ?>" style="width:100px">
+              <input type="text" name="time[]" value="<?= $value['time']; ?>" style="width:100px" class="mt-4">
             </td>
             <td>
               <textarea name="content[]" style="width:400px;height:90px;"><?= $value['content']; ?></textarea>
             </td>
             <td>
-              <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
+              <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?> style="margin-top:40px">
             </td>
             <td>
-              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>">
+              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>" style="margin-top:40px">
             </td>
 
             <input type="hidden" name="id[]" value="<?= $value['id']; ?>">

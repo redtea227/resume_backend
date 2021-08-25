@@ -29,8 +29,12 @@
       <td class="text-start"><input type="text" name="text" style="width:100%"></td>
     </tr>
     <tr>
-      <td class="text-end">網址 : </td>
-      <td class="text-start"><input type="text" name="href" style="width:100%"></td>
+      <td class="text-end">DEMO 網址 : </td>
+      <td class="text-start"><input type="text" name="href1" style="width:100%"></td>
+    </tr>
+    <tr>
+      <td class="text-end">GITHUB 網址 : </td>
+      <td class="text-start"><input type="text" name="href2" style="width:100%"></td>
     </tr>
 </table>
 <div class="text-center">

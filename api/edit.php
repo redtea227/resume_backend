@@ -46,7 +46,8 @@ foreach ($ids as $key => $id) {
         $row['type'] = $_POST['type'][$key];
         $row['subject'] = $_POST['subject'][$key];
         $row['text'] = $_POST['text'][$key];
-        $row['href'] = $_POST['href'][$key];
+        $row['href1'] = $_POST['href1'][$key];
+        $row['href2'] = $_POST['href2'][$key];
         break;
       case 'typewriter';
         $row['sh'] = (isset($_POST['sh']) && $_POST['sh'] == $id) ? 1 : 0;

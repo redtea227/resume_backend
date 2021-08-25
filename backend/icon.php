@@ -19,13 +19,13 @@
         ?>
           <tr>
             <td>
-              <i class="<?= $value['class']; ?>">
+              <i class="<?= $value['class']; ?>" style="line-height: 30px;">
             </td>
             <td>
-              <input type="text" name="name[]" value="<?= $value['name']; ?>">
+              <input type="text" name="name[]" value="<?= $value['name']; ?>" class="text-center">
             </td>
             <td>
-              <input type="text" name="class[]" value="<?= $value['class']; ?>">
+              <input type="text" name="class[]" value="<?= $value['class']; ?>" class="text-center">
             </td>
             <td>
               <input type="text" name="href[]" value="<?= $value['href']; ?>" style="width:100%">

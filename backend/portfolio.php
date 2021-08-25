@@ -10,8 +10,8 @@
           <td>主題</td>
           <td>敘述</td>
           <td>網址</td>
-          <td width="5%">顯示</td>
-          <td width="5%">刪除</td>
+          <td>顯示</td>
+          <td>刪除</td>
           <td></td>
         </tr>
         <?php
@@ -29,7 +29,7 @@
               <img src="img/<?= $value['img']; ?>" style="width:120px;height:80px;">
             </td>
             <td>
-              <select name="type[]" style="width:100px">
+              <select name="type[]" style="width:100px" class="mt-4">
                 <option value="<?= $value['type']; ?>"><?= $value['type']; ?></option>
                 <option value="frontend">frontend</option>
                 <option value="backend">backend</option>
@@ -38,20 +38,21 @@
               <!-- <input type="text" name="type[]" value="<?= $value['type']; ?>" style="width:100px"> -->
             </td>
             <td>
-              <input type="text" name="subject[]" value="<?= $value['subject']; ?>">
+              <input type="text" name="subject[]" value="<?= $value['subject']; ?>" style="width:130px" class="mt-4">
             </td>
             <td>
               <textarea name="text[]" style="width: 100%;height: 80px"><?= $value['text']; ?></textarea>
               <!-- <input type="text" name="text[]" value="<?= $value['text']; ?>"> -->
             </td>
             <td>
-              <input type="text" name="href[]" value="<?= $value['href']; ?>">
+            <i class="fas fa-link fa-1x me-2"></i><input type="text" name="href1[]" value="<?= $value['href1']; ?>" class="my-2"><br>
+            <i class="fab fa-github fa-1x me-2"></i><input type="text" name="href2[]" value="<?= $value['href2']; ?>">
             </td>
             <td>
-              <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
+              <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?> style="margin-top: 35px;">
             </td>
             <td>
-              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>">
+              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>"style="margin-top: 35px;">
             </td>
             <td>
               <input type="button" class="btn btn-outline-success" value="更換圖片" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/portfolio_update.php?id=<?= $value['id']; ?>&#39;)">
