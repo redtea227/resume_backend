@@ -54,15 +54,11 @@ if (!isset($_SESSION['admin'])) {
             <a href="?do=skills" class="btn btn-outline-success text-decoration-none p-3">技能管理</a>
             <a href="?do=experience" class="btn btn-outline-success text-decoration-none p-3">經歷管理</a>
             <a href="?do=portfolio" class="btn btn-outline-success text-decoration-none p-3">作品集管理</a>
-            <!-- <a href="?do=total" class="btn btn-outline-success text-decoration-none p-3">進站總人數管理</a> -->
             <a href="?do=icon" class="btn btn-outline-success text-decoration-none p-3">Icon</a>
             <a href="?do=admin" class="btn btn-outline-success text-decoration-none p-3">管理者帳號管理</a>
             <a href="index.php" class="btn btn-outline-success text-warning text-decoration-none p-3">返回前台</a>
           </div>
         </div>
-        <!-- <div class="dbor" style="margin:3px; width:95%; height:11%; line-height:45px;">
-          <span class="t">進站總人數 :<?= $Total->find(1)['total']; ?></span>
-        </div> -->
       </div>
       <div style="height:540px; width:86.5%; margin:2px 0px 0px 0px; position:relative; left:20px;">
         <!--正中央-->

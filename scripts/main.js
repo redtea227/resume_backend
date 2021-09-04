@@ -4,15 +4,14 @@ AOS.init({
   duration: 1000
 });
 
-// Add your javascript here
-
+//漢堡選單點擊後收回
 $(function () {
   $('.navbar a').on('click', function () {
     $('.navbar-toggler').click();
   });
 });
 
-
+//選單滾動
 $("#rogerMenu a").click(function () {
   const who = $(this).attr('href'),
     viewWidth = $(window).innerWidth(),

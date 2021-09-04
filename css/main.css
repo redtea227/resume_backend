@@ -47,7 +47,7 @@
 .card img{
   display: block;
   width: 100%;
-  height: auto;
+  height: 200px;
 }
 .card .view{
   opacity: 0;
@@ -81,7 +81,7 @@
 /* cover info */
 
 
-.my-custom{
+.mt-6{
   margin-top: 6rem!important;
 }
 .navbar-light .navbar-nav .nav-link {

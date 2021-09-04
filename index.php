@@ -71,7 +71,7 @@
   <div class="page-content">
     <div class="container">
       <div class="resume-container">
-        <div class="shadow-1-strong bg-white my-custom" id="intro">
+        <div class="shadow-1-strong bg-white mt-6" id="intro">
           <div class="text-white">
             <div class="cover bg-image"><img src="img/<?= $Bg->find(['sh' => 1])['img']; ?>" alt="<?= $Bg->find(['sh' => 1])['text']; ?>">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);backdrop-filter: blur(2px);">
