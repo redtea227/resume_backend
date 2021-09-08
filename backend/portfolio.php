@@ -2,22 +2,22 @@
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center align-middle">
       <tbody>
         <tr>
           <td>作品圖</td>
-          <td>分類</td>
-          <td>主題</td>
-          <td>敘述</td>
+          <td width="13%">分類</td>
+          <td width="13%">主題</td>
+          <td width="24%">敘述</td>
           <td>網址</td>
-          <td>顯示</td>
-          <td>刪除</td>
+          <td width="5%">顯示</td>
+          <td width="5%">刪除</td>
           <td></td>
         </tr>
         <?php
 
         $all = $Portfolio->count();
-        $div = 5;
+        $div = 4;
         $pages = ceil($all / $div);
         $now = isset($_GET['p']) ? $_GET['p'] : 1;
         $start = ($now - 1) * $div;
@@ -29,30 +29,28 @@
               <img src="img/<?= $value['img']; ?>" style="width:120px;height:80px;">
             </td>
             <td>
-              <select name="type[]" style="width:100px" class="mt-4">
+              <select name="type[]" class="form-select">
                 <option value="<?= $value['type']; ?>"><?= $value['type']; ?></option>
                 <option value="frontend">frontend</option>
                 <option value="backend">backend</option>
                 <option value="photo">photo</option>
               </select>
-              <!-- <input type="text" name="type[]" value="<?= $value['type']; ?>" style="width:100px"> -->
             </td>
             <td>
-              <input type="text" name="subject[]" value="<?= $value['subject']; ?>" style="width:130px" class="mt-4">
+              <input type="text" name="subject[]" value="<?= $value['subject']; ?>" class="form-control">
             </td>
             <td>
-              <textarea name="text[]" style="width: 100%;height: 80px"><?= $value['text']; ?></textarea>
-              <!-- <input type="text" name="text[]" value="<?= $value['text']; ?>"> -->
+              <textarea name="text[]" class="form-control" style="height: 120px"><?= $value['text']; ?></textarea>
             </td>
             <td>
-            <i class="fas fa-link fa-1x me-2"></i><input type="text" name="href1[]" value="<?= $value['href1']; ?>" class="my-2"><br>
-            <i class="fab fa-github fa-1x me-2"></i><input type="text" name="href2[]" value="<?= $value['href2']; ?>">
+              <i class="fas fa-link fa-1x me-2"></i><input type="text" name="href1[]" value="<?= $value['href1']; ?>" class="form-control d-inline-block" style="width:85%"><br>
+              <i class="fab fa-github fa-1x me-2"></i><input type="text" name="href2[]" value="<?= $value['href2']; ?>" class="form-control d-inline-block" style="width:85%">
             </td>
             <td>
-              <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?> style="margin-top: 35px;">
+              <input type="checkbox" name="sh[]" class="form-check-input" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
             </td>
             <td>
-              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>"style="margin-top: 35px;">
+              <input type="checkbox" name="del[]" class="form-check-input" value="<?= $value['id']; ?>">
             </td>
             <td>
               <input type="button" class="btn btn-outline-success" value="更換圖片" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/portfolio_update.php?id=<?= $value['id']; ?>&#39;)">
@@ -67,16 +65,16 @@
     <div class="text-center">
       <?php
       if (($now - 1) > 0) {
-        echo "<a href='?do=portfolio&p=" . ($now - 1) . "'> < </a>";
+        echo "<a href='?do=portfolio&p=" . ($now - 1) . "' class='text-decoration-none'> < </a>";
       }
 
       for ($i = 1; $i <= $pages; $i++) {
         $fontsize = ($now == $i) ? '24px' : '16px';
-        echo "<a href='?do=portfolio&p=$i' style='font-size:$fontsize'> $i </a>";
+        echo "<a href='?do=portfolio&p=$i' style='font-size:$fontsize' class='text-decoration-none'> $i </a>";
       }
 
       if (($now + 1) <= $pages) {
-        echo "<a href='?do=portfolio&p=" . ($now + 1) . "'> > </a>";
+        echo "<a href='?do=portfolio&p=" . ($now + 1) . "' class='text-decoration-none'> > </a>";
       }
 
       ?>

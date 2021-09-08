@@ -2,7 +2,7 @@
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center align-middle">
       <tbody>
         <tr>
           <td>技能</td>
@@ -26,22 +26,21 @@
           <tr>
 
             <td>
-              <input type="text" name="name[]" value="<?= $value['name']; ?>" style="width:200px" class="text-center">
+              <input type="text" name="name[]" class="form-control text-center" value="<?= $value['name']; ?>">
             </td>
             <td>
-              <input type="text" name="level[]" value="<?= $value['level']; ?>" class="text-center" class="text-center">
+              <input type="text" name="level[]" class="form-control text-center" value="<?= $value['level']; ?>">
             </td>
             <td>
-              <select name="width[]">
+              <select name="width[]" class="form-select">
                 <option value="<?= $value['width']; ?>"><?= $value['width']; ?></option>
                 <option value="90%">90%</option>
                 <option value="80%">80%</option>
                 <option value="70%">70%</option>
               </select>
-              <!-- <input type="text" name="width[]" value="<?= $value['width']; ?>" style="width:100px" class="text-center"> -->
             </td>
             <td>
-              <select name="color[]">
+              <select name="color[]" class="form-select">
                 <option value="<?= $value['color']; ?>"><?= $value['color']; ?></option>
                 <option value="bg-primary">bg-primary</option>
                 <option value="bg-secondary">bg-secondary</option>
@@ -51,21 +50,19 @@
                 <option value="bg-info">bg-info</option>
                 <option value="bg-dark">bg-dark</option>
               </select>
-              <!-- <input type="text" name="color[]" value="<?= $value['color']; ?>" class="text-center"> -->
             </td>
             <td>
-              <select name="position[]" style="width:100px">
+              <select name="position[]" class="form-select">
                 <option value="<?= $value['position']; ?>"><?= $value['position']; ?></option>
                 <option value="left">left</option>
                 <option value="right">right</option>
               </select>
-              <!-- <input type="text" name="position[]" value="<?= $value['position']; ?>" style="width:100px"> -->
             </td>
             <td>
-              <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
+              <input type="checkbox" name="sh[]" class="form-check-input" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
             </td>
             <td>
-              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>">
+              <input type="checkbox" name="del[]" class="form-check-input" value="<?= $value['id']; ?>">
             </td>
 
             <input type="hidden" name="id[]" value="<?= $value['id']; ?>">
@@ -78,16 +75,16 @@
     <div class="text-center">
       <?php
       if (($now - 1) > 0) {
-        echo "<a href='?do=skills&p=" . ($now - 1) . "'> < </a>";
+        echo "<a href='?do=skills&p=" . ($now - 1) . "' class='text-decoration-none'> < </a>";
       }
 
       for ($i = 1; $i <= $pages; $i++) {
         $fontsize = ($now == $i) ? '24px' : '16px';
-        echo "<a href='?do=skills&p=$i' style='font-size:$fontsize'> $i </a>";
+        echo "<a href='?do=skills&p=$i' style='font-size:$fontsize' class='text-decoration-none'> $i </a>";
       }
 
       if (($now + 1) <= $pages) {
-        echo "<a href='?do=skills&p=" . ($now + 1) . "'> > </a>";
+        echo "<a href='?do=skills&p=" . ($now + 1) . "' class='text-decoration-none'> > </a>";
       }
 
       ?>
@@ -96,7 +93,7 @@
       <tbody>
         <tr>
           <td width="200px">
-            <input type="button"  class="btn btn-success" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
+            <input type="button" class="btn btn-success" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
           </td>
           <td class="text-center">
             <input type="submit" value="修改確定" class="btn btn-success">

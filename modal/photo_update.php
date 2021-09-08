@@ -1,20 +1,17 @@
-<?php include_once "../base.php";?>
+<?php include_once "../base.php"; ?>
 
 <h3 class='text-center mt-3'>更換大頭照圖片</h3>
 <hr>
 
 <form action="api/upload.php" method="post" enctype="multipart/form-data">
-<table class="m-auto">
-    <tr>
-        <td class="text-end"><?=$hs['photo'];?>：</td>
-        <td class="text-end"><input type="file" name="img"></td>
-    </tr>
-</table>
-<div class="text-center">
-    <input type="submit" value="更新">
-    <input type="reset" value="重置">
+  <div class="mx-auto w-50">
+    <input class="form-control" type="file" name="img">
+  </div>
+  <div class="text-center mt-3">
+    <input type="submit" class="btn btn-success" value="更新">
+    <input type="reset" class="btn btn-success" value="重置">
     <input type="hidden" name='table' value='photo'>
-    <input type="hidden" name='id' value='<?=$_GET['id'];?>'>
+    <input type="hidden" name='id' value='<?= $_GET['id']; ?>'>
 
-</div>
+  </div>
 </form>

@@ -2,21 +2,21 @@
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center align-middle">
       <tbody>
         <tr>
           <td>經驗</td>
           <td>公司</td>
           <td>時間</td>
           <td>內容</td>
-          <td>顯示</td>
-          <td>刪除</td>
+          <td width="5%">顯示</td>
+          <td width="5%">刪除</td>
         </tr>
 
         <?php
 
         $all = $Experience->count();
-        $div = 5;
+        $div = 3;
         $pages = ceil($all / $div);
         $now = isset($_GET['p']) ? $_GET['p'] : 1;
         $start = ($now - 1) * $div;
@@ -26,22 +26,22 @@
           <tr>
 
             <td>
-              <input type="text" name="name[]" value="<?= $value['name']; ?>" class="mt-4">
+              <input type="text" name="name[]" value="<?= $value['name']; ?>" class="form-control">
             </td>
             <td>
-              <input type="text" name="company[]" value="<?= $value['company']; ?>" class="mt-4">
+              <input type="text" name="company[]" value="<?= $value['company']; ?>" class="form-control">
             </td>
             <td>
-              <input type="text" name="time[]" value="<?= $value['time']; ?>" style="width:100px" class="mt-4">
+              <input type="text" name="time[]" value="<?= $value['time']; ?>" class="form-control">
             </td>
             <td>
-              <textarea name="content[]" style="width:400px;height:90px;"><?= $value['content']; ?></textarea>
+              <textarea name="content[]" class="form-control" style="width:400px;height:150px;"><?= $value['content']; ?></textarea>
             </td>
             <td>
-              <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?> style="margin-top:40px">
+              <input type="checkbox" name="sh[]" class="form-check-input" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
             </td>
             <td>
-              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>" style="margin-top:40px">
+              <input type="checkbox" name="del[]" class="form-check-input" value="<?= $value['id']; ?>">
             </td>
 
             <input type="hidden" name="id[]" value="<?= $value['id']; ?>">
@@ -54,16 +54,16 @@
     <div class="text-center">
       <?php
       if (($now - 1) > 0) {
-        echo "<a href='?do=experience&p=" . ($now - 1) . "'> < </a>";
+        echo "<a href='?do=experience&p=" . ($now - 1) . "' class='text-decoration-none'> < </a>";
       }
 
       for ($i = 1; $i <= $pages; $i++) {
         $fontsize = ($now == $i) ? '24px' : '16px';
-        echo "<a href='?do=experience&p=$i' style='font-size:$fontsize'> $i </a>";
+        echo "<a href='?do=experience&p=$i' style='font-size:$fontsize' class='text-decoration-none'> $i </a>";
       }
 
       if (($now + 1) <= $pages) {
-        echo "<a href='?do=experience&p=" . ($now + 1) . "'> > </a>";
+        echo "<a href='?do=experience&p=" . ($now + 1) . "' class='text-decoration-none'> > </a>";
       }
 
       ?>

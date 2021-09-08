@@ -25,7 +25,7 @@
     <div class="text-center text-lg-left">
       <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
-          <div class="login" style="width: 300px;">
+          <div class="login" style="width: 325px;">
             <a class="navbar-brand" href="#">Roger Lo
             </a>
             <?php
@@ -35,8 +35,8 @@
             <?php
             } else {
             ?>
-              <a href="backend.php" class="btn btn-outline-warning">後台管理</a>&nbsp&nbsp&nbsp
-              <a href="api/logout.php" class="btn btn-outline-warning">登出</a>
+              <a href="backend.php" class="btn btn-outline-warning" style="font-size: 1rem;">後台管理</a>&nbsp&nbsp&nbsp
+              <a href="api/logout.php" class="btn btn-outline-warning" style="font-size: 1rem;">登出</a>
             <?php
             }
             ?>
@@ -130,7 +130,7 @@
                 foreach ($skills as $key => $value) {
                 ?>
                   <div class="mb-3"><span class="fw-bolder"><?= $value['name']; ?></span>
-                    <div class="progress my-2 rounded" style="height: 20px">
+                    <div class="progress my-2 rounded" style="height: 20px;line-height: 20px;">
                       <div class="progress-bar <?= $value['color']; ?>" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: <?= $value['width']; ?>;"><?= $value['level']; ?></div>
                     </div>
                   </div>
@@ -144,7 +144,7 @@
                 foreach ($skills as $key => $value) {
                 ?>
                   <div class="mb-3"><span class="fw-bolder"><?= $value['name']; ?></span>
-                    <div class="progress my-2 rounded" style="height: 20px">
+                    <div class="progress my-2 rounded" style="height: 20px;line-height: 20px;">
                       <div class="progress-bar <?= $value['color']; ?>" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: <?= $value['width']; ?>"><?= $value['level']; ?></div>
                     </div>
                   </div>
@@ -167,7 +167,7 @@
               ?>
                 <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="50">
                   <div class="timeline-head px-4 pt-3">
-                    <div class="h5"><?= $value['name']; ?><span class="text-muted h6"> <?= $value['company']; ?></span></div>
+                    <div class="h5 fw-bold"><?= $value['name']; ?><span class="text-muted h6"> <?= $value['company']; ?></span></div>
                   </div>
                   <div class="timeline-body px-4 pb-4">
                     <div class="text-muted text-small mb-3"><?= $value['time']; ?></div>

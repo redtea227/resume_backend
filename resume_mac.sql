@@ -2,8 +2,8 @@
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- 主機： 127.0.0.1
--- 產生時間： 2021-09-04 17:01:08
+-- 主機： localhost
+-- 產生時間： 2021 年 09 月 05 日 14:23
 -- 伺服器版本： 10.4.18-MariaDB
 -- PHP 版本： 7.3.27
 
@@ -82,12 +82,10 @@ CREATE TABLE `experience` (
 --
 
 INSERT INTO `experience` (`id`, `name`, `company`, `time`, `content`, `sh`) VALUES
-(1, 'PHP資料庫網頁設計', 'at 泰山職訓局', '2021 - Present', '前端網頁排版 HTML/CSS<br>\r\n網頁動態技術 JavaScript/jQuery/Ajax<br>\r\n後端PHP與MySQL資料庫連結規劃<br>\r\nPhotoshop/Illustrator繪圖操作', 1),
-(2, 'Tour Guide', 'at YOLO Taiwan', '2018 - 2020', '在地外語私人導遊,接待外籍遊客<br>\r\n北北基客製化一日遊行程<br>\r\nTripadvisor、Viator、GetYourGuide合作平台<br>\r\n<a href=\"#\" target=\"_blank\">5-stars reviews</a>', 1),
-(3, 'Studying & traveling abroad', 'at Australia and Philippine', '2016 - 2018', '澳洲打工度假 Melbourne/Sydney/Cairns/Uluru<br>\r\n菲律賓語言學校 English Fella 2 -  Cebu English language school<br>\r\n考取多益 730-<a href=\"http://220.128.133.15/s1100217/resume_img/TOEIC.jpg\" target=\"_blank\">證書img</a>', 0),
-(4, 'Field Application Engineer', 'at EDOM Technology', '2014 - 2016', '負責Broadcom產品線代理,其內容為被動式光纖網路(GPON)和WIFI模組環境的架設與測試<br>\r\n電子零件品保相關業務,Green  report ,SGS  report  ,歐盟RoHS ,REACH ,Halogen  free等', 1),
-(5, '材料科學與工程學系畢業', 'at 國立東華大學', '2009 - 2013', '主修傳統及光電半導體材料相關實驗,如金屬金相、陶瓷壓電、微影光罩、PVD、CVD、奈米薄膜材料', 1),
-(6, 'test', 'test', 'test', 'test', 0);
+(1, 'PHP資料庫網頁設計', 'at 泰山職訓局', '2021/03 - 2021/09 (0.5Y)', '學習如何網頁排版、動態技術互動、資料庫規劃開發外，更注重的是前後端實作整合應用<br>\r\n包含了API串接、RWD、Laravel framework技術操作以及Git版控<br>\r\n<br>\r\n•前端網頁排版 HTML/CSS<br>\r\n•網頁動態技術 JavaScript/jQuery/Ajax<br>\r\n•後端PHP與MySQL資料庫連結規劃<br>\r\n•Photoshop/Illustrator繪圖操作', 1),
+(2, 'Tour Guide', 'at YOLO Taiwan', '2018/03 - 2020/03 (2Y)', 'Tripadvisor、Viator、GetYourGuide旅遊合作平台，在地外語私人導遊，接待外籍遊客<br>\r\n<br>\r\n•行前接洽並溝通規劃客製化需求<br>\r\n•短時間建立良好客戶信任關係<br>\r\n•推廣在地歷史人文及美食文化<br>\r\n•以精彩的旅遊體驗推動國民外交\r\n<a href=\"#\" target=\"_blank\">5 star-reviews</a>', 1),
+(4, 'Field Application Engineer', 'at EDOM Technology', '2014/09 - 2016/05 (1.5Y)', '負責Broadcom產品線代理，其內容為被動式光纖網路(GPON)和WIFI模組環境的架設與測試<br>\r\n電子零件品保應用業務，熟悉國際相關綠色文件規範<br>\r\n<br>\r\n•獨立作業及原廠客戶端溝通協調能力<br>\r\n•追蹤專案時程進度掌控<br>\r\n•協助業務團隊解決銷售過程中的技術問題及提供售後的技術支援<br>\r\n•負責產品安全規範文件的更新維護<br>\r\n•熟悉職場英文書信用語', 1),
+(5, '材料科學與工程學系畢業', 'at 國立東華大學', '2009 - 2013 (4Y)', '', 1);
 
 -- --------------------------------------------------------
 
@@ -132,7 +130,7 @@ CREATE TABLE `intro` (
 
 INSERT INTO `intro` (`id`, `text`, `sh`) VALUES
 (2, 'Hello! I’m Roger Lo. I am passionate about Web Design. I am a skilled front-end developer and back-end developer such as HTML/CSS , JS and PHP. I am a quick learner and a team worker that gets the job done.<br>\r\n<br>', 0),
-(3, '大家好!我是Roger，我的前份工作雖然因為在2020疫情期間受到了影響而停擺，但這也讓我有機會空出了時間並停下腳步，進一步規劃自己的職涯，而把方向設定在遠距及未來趨勢上，早期從數位媒體上對程式設計的世界就充滿了好奇心，這也符合我設定的目標，在書籍及Udemy線上課程中學習了Python，有了對程式語言的基礎認識後，就決定全心投入程式設計的領域，踏上了轉職的道路。<br>\r\n<br>\r\n在PHP資料庫網頁設計將近六個月扎實的課程裡，除了學習如何網頁排版、動態技術互動、資料庫規劃開發外，更注重的是前後端實作整合應用，這當中也包含API串接、RWD、Laravel framework技術操作以及Git版控，從各項專業技能與知識的累積上，期待著能成為理想目標中的網頁程式設計師。', 1);
+(3, '我是Roger，熱愛運動及旅遊，對未知事物永遠充滿好奇心，勇於面對新挑戰<br>\r\n2020的一場疫情讓我有機會停下腳步並重新規劃職涯，在透過書籍及Udemy自學python的過程中，開發出對於程式設計的興趣，進一步全心投入其領域並踏上了轉職的道路，從各項專業技能與知識的累積上，期待著能成為理想目標中的網頁程式設計師。<br>', 1);
 
 -- --------------------------------------------------------
 
@@ -152,8 +150,8 @@ CREATE TABLE `photo` (
 
 INSERT INTO `photo` (`id`, `img`, `sh`) VALUES
 (5, 'headshot_1.jpg', 0),
-(8, 'headshot_2.jpg', 0),
-(9, 'headshot_3.JPG', 1);
+(8, 'headshot_2.jpg', 1),
+(9, 'headshot_3.JPG', 0);
 
 -- --------------------------------------------------------
 
@@ -209,7 +207,7 @@ INSERT INTO `skills` (`id`, `name`, `level`, `width`, `position`, `color`, `sh`)
 (1, 'HTML', 'ADVANCE', '80%', 'left', 'bg-info', 1),
 (2, 'CSS', 'ADVANCE', '80%', 'left', 'bg-info', 1),
 (3, 'JavaScript/jQuery', 'ADVANCE', '80%', 'left', 'bg-info', 1),
-(4, 'AJAX', 'ADVANCE', '80%', 'left', 'bg-info', 1),
+(4, 'AJAX', 'BEGINNER', '70%', 'left', 'bg-info', 1),
 (5, 'English TOEIC 730', 'ADVANCE', '80%', 'right', 'bg-secondary', 1),
 (6, 'PHP', 'ADVANCE', '80%', 'right', 'bg-secondary', 1),
 (7, 'MySQL', 'ADVANCE', '80%', 'right', 'bg-secondary', 1),
@@ -235,8 +233,8 @@ CREATE TABLE `typewriter` (
 --
 
 INSERT INTO `typewriter` (`id`, `first`, `second`, `third`, `sh`) VALUES
-(1, 'To make each day count', 'Roger Lo', 'Web developer', 1),
-(2, '你好啊', 'amy', 'ghko', 0);
+(1, 'There is no end to learning', '羅鼎傑 | Roger Lo', 'Web developer', 1),
+(2, 'To make each day count', 'amy', 'ghko', 0);
 
 --
 -- 已傾印資料表的索引

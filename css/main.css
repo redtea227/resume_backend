@@ -12,18 +12,18 @@
 }
 
 #rogerMenu{
-    background: rgb(204, 238, 255, 0.3);
+    /* background: rgb(204, 238, 255, 0.3); */
     box-shadow: 0 5px 45px rgb(0 0 0 / 10%);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-    border-radius: 10px;
+    transition: 2s;
 }
-/* 
+
 .bg-custom{
-  background: rgb(204, 238, 255, 0.3);
-} */
+  background: rgb(57,192,237,0.1);
+}
 
 .resume-container .shadow-1-strong{
   border-radius: 5px;
@@ -99,8 +99,9 @@
   font-size: .75rem;
   border-radius: .25rem;
   color: #000!important;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background: rgb(57,192,237);
+  /* background-color: #ffc107;
+  border-color: #ffc107; */
 }
 
 #rogerArrow {

@@ -4,30 +4,25 @@
 <hr>
 
 <form action="api/add.php" method="post" enctype="multipart/form-data">
-  <table class="m-auto">
-    <tr>
-      <td class="text-end">經歷 : </td>
-      <td class="text-start"><input type="text" name="name" class="w-100"></td>
-    </tr>
-    <tr>
-      <td class="text-end">公司 : </td>
-      <td class="text-start"><input type="text" name="company" class="w-100"></td>
-    </tr>
-    <tr>
-      <td class="text-end">時間 : </td>
-      <td class="text-start"><input type="text" name="time" class="w-100"></td>
-    </tr>
-    <tr>
-      <td class="text-end">內容 : </td>
-      <td>
-      <textarea name="content" style="width:300px;height:200px"></textarea>
-      <!-- <input type="text" name="content"> -->
-    </td>
-    </tr>
-  </table>
+  <div class="mx-auto w-50 mb-3">
+    <label for="name" class="form-label fs-5">經歷</label>
+    <input type="text" name="name" class="form-control" id="name">
+  </div>
+  <div class="mx-auto w-50 mb-3">
+    <label for="company" class="form-label fs-5">公司</label>
+    <input type="text" name="company" class="form-control" id="company">
+  </div>
+  <div class="mx-auto w-50 mb-3">
+    <label for="time" class="form-label fs-5">時間</label>
+    <input type="text" name="time" class="form-control" id="time">
+  </div>
+  <div class="mx-auto w-50 mb-3">
+    <label for="content" class="form-label fs-5">敘述</label>
+    <textarea name="content" id="content" class="form-control" style="height: 200px"></textarea>
+  </div>
   <div class="text-center">
-    <input type="submit" value="新增">
-    <input type="reset" value="重置">
+    <input type="submit" class="btn btn-success" value="新增">
+    <input type="reset" class="btn btn-success" value="重置">
     <input type="hidden" name="table" value="experience">
   </div>
 </form>

@@ -13,7 +13,6 @@ $ts=[
         'experience'=>"經歷管理",
         "portfolio"=>"作品集管理",
         "typewriter"=>"打字機管理",
-        "total"=>"進站總人數管理",
         "icon"=>"icon管理",
         "admin"=>"管理者帳號管理"
     ]; 
@@ -27,18 +26,6 @@ $as=[
         "typewriter"=>"新增打字機",
         "icon"=>"新增icon",
         "admin"=>"新增管理者帳號"
-    ]; 
-$hs=[
-        "bg"=>"背景圖片",
-        "intro"=>"簡介",
-        'photo'=>"大頭照",
-        'skills'=>"技能",
-        'experience'=>"經歷",
-        "portfolio"=>"作品集",
-        "typewriter"=>"打字機",
-        "total"=>"進站總人數：",
-        "icon"=>"icon：",
-        "admin"=>"管理者帳號"
     ]; 
 class DB{
     private $dsn="mysql:host=localhost;charset=utf8;dbname=resume";

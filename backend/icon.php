@@ -2,11 +2,11 @@
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center align-middle">
       <tbody>
         <tr>
           <td>圖示</td>
-          <td>名稱</td>
+          <td width="20%">名稱</td>
           <td>i class</td>
           <td>網址</td>
           <td>顯示</td>
@@ -22,19 +22,19 @@
               <i class="<?= $value['class']; ?>" style="line-height: 30px;">
             </td>
             <td>
-              <input type="text" name="name[]" value="<?= $value['name']; ?>" class="text-center">
+              <input type="text" name="name[]" value="<?= $value['name']; ?>" class="text-center form-control">
             </td>
             <td>
-              <input type="text" name="class[]" value="<?= $value['class']; ?>" class="text-center">
+              <input type="text" name="class[]" value="<?= $value['class']; ?>" class="text-center form-control">
             </td>
             <td>
-              <input type="text" name="href[]" value="<?= $value['href']; ?>" style="width:100%">
+              <input type="text" name="href[]" value="<?= $value['href']; ?>" class="form-control">
             </td>
             <td>
-              <input type="checkbox" name="sh[]" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
+              <input type="checkbox" name="sh[]" class="form-check-input" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
             </td>
             <td>
-              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>">
+              <input type="checkbox" name="del[]" class="form-check-input" value="<?= $value['id']; ?>">
             </td>
 
             <input type="hidden" name="id[]" value="<?= $value['id']; ?>">

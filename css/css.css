@@ -15,7 +15,7 @@ header {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 header .box{
@@ -38,7 +38,7 @@ header .box{
   width: 70%;
   min-width: 300px;
   max-width: 800px;
-  height: 70%;
+  height: 80%;
   min-height: 300px;
   position: absolute;
   z-index: 5;

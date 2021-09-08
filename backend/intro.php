@@ -2,7 +2,7 @@
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center align-middle">
       <tbody>
         <tr>
           <td width="90%">自我介紹</td>
@@ -18,13 +18,13 @@
           <tr>
 
             <td>
-              <textarea name="text[]" style="width:90%;height:250px;"><?= $value['text']; ?></textarea>
+              <textarea name="text[]" class="form-control" style="height:200px;"><?= $value['text']; ?></textarea>
             </td>
             <td>
-              <input type="checkbox" name="sh" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
+              <input type="radio" name="sh" class="form-check-input" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
             </td>
             <td>
-              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>">
+              <input type="checkbox" name="del[]" class="form-check-input" value="<?= $value['id']; ?>">
             </td>
 
             <input type="hidden" name="id[]" value="<?= $value['id']; ?>">

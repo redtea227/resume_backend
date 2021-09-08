@@ -71,11 +71,9 @@ var typewriter = new Typewriter(app, {
 $.get('api/typewriter.php', (res) => {
 
   typewriter
-    .pauseFor(500)
-    .typeString(`<span id='slogan'>${res.first}...<span>&#128513;</span><span>&#128513;</span><span>&#128513;</span></span>`)
     .pauseFor(200)
-    .deleteChars(8)
-    .typeString(`<br><span style='font-size:40px'>${res.second}</span><br><span>${res.third}</span>`)
+    .typeString(`<span id='slogan'>${res.first}.</span>`)
+    .typeString(`<br><span style='font-size:40px;'>${res.second}</span><br><span>${res.third}</span>`)
     .pauseFor(1000)
     .start();
 

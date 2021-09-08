@@ -2,7 +2,7 @@
   <h4 class="text-center p-2"><?= $ts[$do]; ?></h4>
 
   <form method="post" action="api/edit.php">
-    <table class="table table-bordered  table-striped text-center">
+    <table class="table table-bordered  table-striped text-center align-middle">
       <tbody>
         <tr>
           <td>名言</td>
@@ -19,19 +19,19 @@
           <tr>
 
             <td>
-              <input type="text" name="first[]" value="<?= $value['first']; ?>" class="w-100 text-center">
+              <input type="text" name="first[]" value="<?= $value['first']; ?>" class="text-center form-control">
             </td>
             <td>
-              <input type="text" name="second[]" value="<?= $value['second']; ?>" class="text-center">
+              <input type="text" name="second[]" value="<?= $value['second']; ?>" class="text-center form-control">
             </td>
             <td>
-              <input type="text" name="third[]" value="<?= $value['third']; ?>" class="text-center">
+              <input type="text" name="third[]" value="<?= $value['third']; ?>" class="text-center form-control">
             </td>
             <td>
-              <input type="checkbox" name="sh" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
+              <input type="radio" name="sh" class="form-check-input" value="<?= $value['id']; ?>" <?= ($value['sh'] == 1) ? "checked" : ""; ?>>
             </td>
             <td>
-              <input type="checkbox" name="del[]" value="<?= $value['id']; ?>">
+              <input type="checkbox" name="del[]" class="form-check-input" value="<?= $value['id']; ?>">
             </td>
 
             <input type="hidden" name="id[]" value="<?= $value['id']; ?>">
