@@ -250,6 +250,25 @@ footer a:not(.nav-link) {
   cursor: pointer;
 }
 
+/* nav-link效果 */
+#rogerMenu .nav-link{
+  transition: 1s ease;
+}
 
+#rogerMenu .nav-link::after,
+#rogerMenu .navbar-brand::after{
+  content:"";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background: blue;
+  /* margin: 3px 0; */
+  transition: 1s width ease;
+}
+
+#rogerMenu .nav-link.active::after,
+#rogerMenu .navbar-brand.active::after{
+  width: 100%;
+}
 
 

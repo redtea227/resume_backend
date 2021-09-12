@@ -23,7 +23,7 @@ $("#rogerMenu a").click(function () {
     }, 1000);
   } else {
     $("html").animate({
-      scrollTop: val + 200
+      scrollTop: val + 215
     }, 1000);
   }
 });
@@ -47,17 +47,44 @@ const bgmenu = function () {
   }
 }
 
+// scroll spy
+$(window).scroll(function () {
+  spy();
+});
 
+const spy = function () {
+  const nowat = $(window).scrollTop();
+
+  $("section").each(function () {
+    const
+      id = $(this).attr('id'),
+      offset = $(this).offset().top - $("#rogerMenu").innerHeight() - 1,
+      // slide正常( - $("#rogerMenu").innerHeight() - 1)
+      height = $(this).innerHeight();
+    // console.log(id);
+
+    if (offset <= nowat && nowat < offset + height) {
+      // console.log(id);
+      $("#rogerMenu a").removeClass('active');
+      $(`#rogerMenu a[href='#${id}']`).addClass('active')
+    }
+  });
+}
+
+//arrow點擊收回nav-link效果
+$('#rogerArrow').click(function(){
+  $("#rogerMenu a").removeClass('active');
+})
 
 // 網頁滾動時
 $(window).scroll(function () {
-  // spy();
+  spy();
   bgmenu();
 });
 // 網頁更改寬度時
 $(window).resize(bgmenu);
 
-// spy();
+spy();
 bgmenu();
 
 // typewriter

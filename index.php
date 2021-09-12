@@ -28,6 +28,7 @@
           <div class="login" style="width: 325px;">
             <a class="navbar-brand" href="#">Roger Lo
             </a>
+
             <?php
             if (!isset($_SESSION['admin'])) {
             ?>
@@ -47,19 +48,19 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item ms-3">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#rogerAbout">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#rogerSkills">Skills</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#experience">Experience</a>
+                <a class="nav-link" href="#rogerExperience">Experience</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
+                <a class="nav-link" href="#rogerPortfolio">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#rogerContact">Contact</a>
               </li>
             </ul>
           </div>
@@ -71,7 +72,7 @@
   <div class="page-content">
     <div class="container">
       <div class="resume-container">
-        <div class="shadow-1-strong bg-white mt-6" id="intro">
+        <section class="shadow-1-strong bg-white mt-6" id="rogerIntro">
           <div class="text-white">
             <div class="cover bg-image"><img src="img/<?= $Bg->find(['sh' => 1])['img']; ?>" alt="<?= $Bg->find(['sh' => 1])['text']; ?>">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);backdrop-filter: blur(2px);">
@@ -103,10 +104,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- about -->
-        <div class="shadow-1-strong bg-white my-5 p-5" id="about">
+        <section class="shadow-1-strong bg-white my-5 p-5" id="rogerAbout">
           <div class="about-section">
             <div class="row">
               <div class="col">
@@ -117,10 +118,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- skills -->
-        <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
+        <section class="shadow-1-strong bg-white my-5 p-5" id="rogerSkills">
           <div class="skills-section">
             <h2 class="h2 fw-light mb-4">Professional Skills</h2>
             <div class="row">
@@ -154,10 +155,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- experience -->
-        <div class="shadow-1-strong bg-white my-5 p-5" id="experience">
+        <section class="shadow-1-strong bg-white my-5 p-5" id="rogerExperience">
           <div class="work-experience-section">
             <h2 class="h2 fw-light mb-4">Experience</h2>
             <div class="timeline">
@@ -179,10 +180,10 @@
               ?>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- portfolio -->
-        <div class="shadow-1-strong bg-white my-5 p-5" id="portfolio">
+        <section class="shadow-1-strong bg-white my-5 p-5" id="rogerPortfolio">
           <div class="portfolio-section">
             <h2 class="h2 fw-light mb-4">Portfolio</h2>
             <!-- Pills navs -->
@@ -215,8 +216,8 @@
                           <a href="<?= $value['href2']; ?>" target="_blank"><i class="fab fa-github fa-2x" data-mdb-toggle="tooltip" title="GITHUB"></i></a>
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title"><?= $value['subject']; ?></h5>
-                          <p class="card-text"><?= $value['text']; ?></p>
+                          <h5 class="card-title text-center"><?= $value['subject']; ?></h5>
+                          <p class="card-text"><br><?= $value['text']; ?></p>
                         </div>
                       </div>
                     </div>
@@ -239,8 +240,8 @@
                           <a href="<?= $value['href2']; ?>" target="_blank"><i class="fab fa-github fa-2x" data-mdb-toggle="tooltip" title="GITHUB"></i></a>
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title"><?= $value['subject']; ?></h5>
-                          <p class="card-text"><?= $value['text']; ?></p>
+                          <h5 class="card-title text-center"><?= $value['subject']; ?></h5>
+                          <p class="card-text"><br><?= $value['text']; ?></p>
                         </div>
                       </div>
                     </div>
@@ -259,11 +260,10 @@
                       <div class="card h-100">
                         <img src="img/<?= $value['img']; ?>" class="card-img-top" alt="...">
                         <div class="view">
-                          <a href="<?= $value['href1']; ?>" target="_blank" class="me-5"><i class="fas fa-link fa-2x" data-mdb-toggle="tooltip" title="DEMO"></i></a>
-                          <a href="<?= $value['href2']; ?>" target="_blank"><i class="fab fa-github fa-2x" data-mdb-toggle="tooltip" title="GITHUB"></i></a>
+                          <a href="<?= $value['href1']; ?>" target="_blank"><i class="fas fa-link fa-2x" data-mdb-toggle="tooltip" title="DEMO"></i></a>
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title"><?= $value['subject']; ?></h5>
+                          <h5 class="card-title text-center"><?= $value['subject']; ?></h5>
                           <p class="card-text"><?= $value['text']; ?></p>
                         </div>
                       </div>
@@ -277,10 +277,10 @@
             <!-- Pills content -->
 
           </div>
-        </div>
+        </section>
 
         <!-- contact -->
-        <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
+        <section class="shadow-1-strong bg-white my-5 p-5" id="rogerContact">
           <div class="contant-section">
             <h2 class="h2 fw-light text mb-4">Contact</h2>
             <div class="row mb-4">
@@ -314,12 +314,12 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>
   <!-- footer -->
-  <footer class="pt-4 pb-4 text-muted text-center">
+  <footer class="pt-4 pb-4 text-muted text-center mb-5">
     <div class="container">
       <div class="my-3">
         <div class="h4">Roger Lo</div>

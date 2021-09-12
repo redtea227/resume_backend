@@ -17,7 +17,7 @@
         <?php
 
         $all = $Portfolio->count();
-        $div = 4;
+        $div = 3;
         $pages = ceil($all / $div);
         $now = isset($_GET['p']) ? $_GET['p'] : 1;
         $start = ($now - 1) * $div;
