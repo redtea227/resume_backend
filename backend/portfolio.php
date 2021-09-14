@@ -62,23 +62,24 @@
         ?>
       </tbody>
     </table>
-    <div class="text-center">
-      <?php
-      if (($now - 1) > 0) {
-        echo "<a href='?do=portfolio&p=" . ($now - 1) . "' class='text-decoration-none'> < </a>";
-      }
+    <nav>
+      <ul class="pagination justify-content-center">
+        <?php
+        if (($now - 1) > 0) {
+          echo "<li class='page-item'><a class='page-link' href='?do=portfolio&p=" . ($now - 1) . "'> <span>&laquo;</span> </a></li>";
+        }
 
-      for ($i = 1; $i <= $pages; $i++) {
-        $fontsize = ($now == $i) ? '24px' : '16px';
-        echo "<a href='?do=portfolio&p=$i' style='font-size:$fontsize' class='text-decoration-none'> $i </a>";
-      }
+        for ($i = 1; $i <= $pages; $i++) {
+          $fontsize = ($now == $i) ? '24px' : '16px';
+          echo "<li class='page-item'><a href='?do=portfolio&p=$i' style='font-size:$fontsize' class='page-link'> $i </a></li>";
+        }
 
-      if (($now + 1) <= $pages) {
-        echo "<a href='?do=portfolio&p=" . ($now + 1) . "' class='text-decoration-none'> > </a>";
-      }
-
-      ?>
-    </div>
+        if (($now + 1) <= $pages) {
+          echo "<li class='page-item'><a class='page-link' href='?do=portfolio&p=" . ($now + 1) . "'> <span>&raquo;</span> </a></li>";
+        }
+        ?>
+      </ul>
+    </nav>
     <table style="margin-top:20px; width:80%;">
       <tbody>
         <tr>
