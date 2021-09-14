@@ -17,7 +17,7 @@
     <input type="text" name="href" class="form-control" id="href">
   </div>
   <div class="text-center">
-    <input type="submit" class="btn btn-success" value="新增">
+    <input type="submit" class="btn btn-success <?=($_SESSION['login'] != 'roger')?'disabled':'';?>" value="新增">
     <input type="reset" class="btn btn-success" value="重置">
     <input type="hidden" name="table" value="icon">
   </div>

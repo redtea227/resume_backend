@@ -1,5 +1,6 @@
 ﻿<?php include "base.php";
-if (!isset($_SESSION['admin'])) {
+
+if (!isset($_SESSION['login'])) {
   to("index.php");
 }
 ?>
@@ -50,6 +51,12 @@ if (!isset($_SESSION['admin'])) {
           <a href="?do=admin" class="btn btn-outline-success text-decoration-none p-3"><?= $ts['admin']; ?></a>
           <a href="index.php" class="btn btn-outline-success text-decoration-none p-3">返回前台</a>
         </div>
+        <?php 
+          if ($_SESSION['login'] != "roger"){
+            echo "<p class='text-danger text-center mt-5'>目前為訪客模式</p>";
+            echo "<p class='text-danger text-center'>無法編輯</p>";
+          }
+        ?>
       </div>
       <div style="height:540px; width:86.5%; margin:2px 0px 0px 0px; position:relative; left:20px;">
         <!--正中央-->

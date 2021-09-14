@@ -30,7 +30,7 @@
             </a>
 
             <?php
-            if (!isset($_SESSION['admin'])) {
+            if (!isset($_SESSION['login'])) {
             ?>
               <a href="login.php" class="btn btn-outline-warning">登入</a>
             <?php
@@ -195,7 +195,7 @@
                 <a class="nav-link fs-6" id="ex1-tab-2" data-mdb-toggle="pill" href="#backend">後端</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-6" id="ex1-tab-3" data-mdb-toggle="pill" href="#photo">繪圖</a>
+                <a class="nav-link fs-6" id="ex1-tab-3" data-mdb-toggle="pill" href="#photo">視覺</a>
               </li>
             </ul>
             <!-- Pills navs -->

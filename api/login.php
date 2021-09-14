@@ -3,7 +3,7 @@
 $chk = $Admin->count(['acc' => $_POST['acc'], 'pw' => $_POST['pw']]);
 
 if ($chk > 0) {
-  $_SESSION['admin'] = 1;
+  $_SESSION['login'] = $_POST['acc'];
   to("../backend.php?do=bg");
 } else {
   echo "<script>";

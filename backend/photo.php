@@ -42,7 +42,7 @@
             <input type="button" class="btn btn-success" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?= $do; ?>.php&#39;)" value="<?= $as[$do]; ?>">
           </td>
           <td class="text-center">
-            <input type="submit" value="修改確定" class="btn btn-success">
+            <input type="submit" value="修改確定" class="btn btn-success <?=($_SESSION['login'] != 'roger')?'disabled':'';?>">
             <input type="reset" value="重置" class="btn btn-success">
             <input type="hidden" name="table" value="<?= $do; ?>">
           </td>

@@ -21,11 +21,11 @@
       <form action="api/login.php" method="post">
         <div class="mx-auto mb-3">
           <label for="acc" class="form-label fs-5 text-light fw-bold">帳號</label>
-          <input type="text" name="acc" class="form-control" id="acc">
+          <input type="text" name="acc" value="guest" class="form-control" id="acc">
         </div>
         <div class="mx-auto mb-3">
           <label for="pw" class="form-label fs-5 text-light fw-bold">密碼</label>
-          <input type="text" name="pw" class="form-control" id="pw">
+          <input type="password" name="pw" value="952759" class="form-control" id="pw">
         </div>
         <div class="mx-auto mb-3">
           <input type="submit" class="btn btn-secondary" value="登入">
