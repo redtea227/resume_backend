@@ -100,9 +100,23 @@ $.get('api/typewriter.php', (res) => {
   typewriter
     .pauseFor(200)
     .typeString(`<span id='slogan'>${res.first}.</span>`)
-    .typeString(`<br><span style='font-size:40px;'>${res.second}</span><br><span>${res.third}</span>`)
+    .typeString(`<br><span style='font-size:37px;'>${res.second}</span><br><span>${res.third}</span>`)
     .pauseFor(1000)
     .start();
 
 }, 'JSON')
 
+// modal
+
+function op(x,y,url)
+{
+	$(x).fadeIn()
+	if(y)
+	$(y).fadeIn()
+	if(y&&url)
+	$(y).load(url)
+}
+function cl(x)
+{
+	$(x).fadeOut();
+}

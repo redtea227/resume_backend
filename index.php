@@ -20,12 +20,19 @@
 </head>
 
 <body id="top">
+  <!-- modal點擊事件 -->
+  <div id="cover" style="display:none; ">
+    <div id="coverr">
+      <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')"><button type="button" class="btn-close"></button></a>
+      <div id="cvr" style="position:absolute; width:100%; height:100%; margin:auto; z-index:9898;"></div>
+    </div>
+  </div>
   <!-- header_nav -->
   <header class="fixed-top" id="rogerMenu">
     <div class="text-center text-lg-left">
       <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
-          <div class="login" style="width: 325px;">
+          <div class="login">
             <a class="navbar-brand" href="#">Roger Lo
             </a>
 
@@ -36,8 +43,8 @@
             <?php
             } else {
             ?>
-              <a href="backend.php" class="btn btn-outline-warning" style="font-size: 1rem;">後台管理</a>&nbsp&nbsp&nbsp
-              <a href="api/logout.php" class="btn btn-outline-warning" style="font-size: 1rem;">登出</a>
+              <a href="backend.php" class="btn btn-outline-warning">後台管理</a>&nbsp&nbsp&nbsp
+              <a href="api/logout.php" class="btn btn-outline-warning">登出</a>
             <?php
             }
             ?>
@@ -45,7 +52,7 @@
           <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNavAltMarkup">
             <i class="fas fa-bars"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse w-0" id="navbarNavAltMarkup">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item ms-3">
                 <a class="nav-link" href="#rogerAbout">About</a>
@@ -76,7 +83,7 @@
           <div class="text-white">
             <div class="cover bg-image"><img src="img/<?= $Bg->find(['sh' => 1])['img']; ?>" alt="<?= $Bg->find(['sh' => 1])['text']; ?>">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);backdrop-filter: blur(2px);">
-                <div class="text-center p-5">
+                <div class="text-center p-custom">
                   <div class="avatar p-1">
                     <img class="img-thumbnail shadow-2-strong" src="img/<?= $Photo->find(['sh' => 1])['img']; ?>">
                   </div>
@@ -172,7 +179,13 @@
                   </div>
                   <div class="timeline-body px-4 pb-4">
                     <div class="text-muted text-small mb-3"><?= $value['time']; ?></div>
-                    <div><?= $value['content']; ?></div>
+                    <div><?= $value['content']; ?>
+                      <!-- <?php
+                      if ($value['name'] == "Tour Guide") {
+                        echo "<input type='button' class='btn btn-success' onclick='op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/carousel.php&#39;)' value='666'>";
+                      }
+                      ?> -->
+                    </div>
                   </div>
                 </div>
               <?php
@@ -203,7 +216,7 @@
             <!-- Pills content -->
             <div class="tab-content" id="ex1-content">
               <div class="tab-pane fade show active" id="frontend">
-                <div class="row row-cols-2 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
                   <?php
                   $project = $Portfolio->all(['type' => 'frontend', 'sh' => 1]);
                   foreach ($project as $key => $value) {
@@ -227,7 +240,7 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="backend">
-                <div class="row row-cols-2 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
                   <?php
                   $project = $Portfolio->all(['type' => 'backend', 'sh' => 1]);
                   foreach ($project as $key => $value) {
@@ -251,7 +264,7 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="photo">
-                <div class="row row-cols-2 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
                   <?php
                   $project = $Portfolio->all(['type' => 'photo', 'sh' => 1]);
                   foreach ($project as $key => $value) {
@@ -287,7 +300,7 @@
               <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
                 <div class="mt-1">
                   <div class="h6"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i>
-                    +886 932-260-677</div>
+                    +886 932-260-676</div>
                   <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i>
                     redtea227@hotmail.com</div>
                 </div>
@@ -340,9 +353,10 @@
         </div>
       </div>
       <div class="text-small">
-        <div class="mb-1">&copy; 2021 Roger Lo</div>
-        <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
       </div>
+      <div class="mb-1">&copy; 2021 Roger Lo</div>
+      <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+    </div>
     </div>
     <div id="rogerArrow" class="position-fixed">
       <a href="#" class="btn-i">
@@ -351,12 +365,14 @@
       </a>
     </div>
   </footer>
+
   <!-- jQ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
   <script src="scripts/mdb.min.js?ver=1.2.1"></script>
   <script src="scripts/aos.js?ver=1.2.1"></script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="scripts/main.js?ver=1.2.1"></script>
+
   <script>
     var form = document.getElementById("my-form");
 
