@@ -16,6 +16,7 @@
   <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
   <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
   <link href="css/main.css?ver=1.2.1" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
 
 </head>
 
@@ -23,7 +24,7 @@
   <!-- modal點擊事件 -->
   <div id="cover" style="display:none; ">
     <div id="coverr">
-      <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')"><button type="button" class="btn-close"></button></a>
+      <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')"><button type="button" class="btn-close bg-primary"></button></a>
       <div id="cvr" style="position:absolute; width:100%; height:100%; margin:auto; z-index:9898;"></div>
     </div>
   </div>
@@ -180,11 +181,11 @@
                   <div class="timeline-body px-4 pb-4">
                     <div class="text-muted text-small mb-3"><?= $value['time']; ?></div>
                     <div><?= $value['content']; ?>
-                      <!-- <?php
+                      <?php
                       if ($value['name'] == "Tour Guide") {
-                        echo "<input type='button' class='btn btn-success' onclick='op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/carousel.php&#39;)' value='666'>";
+                        echo "<br><input type='button' class='btn btn-success' onclick='op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/carousel.php&#39;)' value='Feedback'>";
                       }
-                      ?> -->
+                      ?>
                     </div>
                   </div>
                 </div>
@@ -372,6 +373,7 @@
   <script src="scripts/aos.js?ver=1.2.1"></script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="scripts/main.js?ver=1.2.1"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
   <script>
     var form = document.getElementById("my-form");
