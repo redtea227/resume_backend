@@ -238,6 +238,12 @@ html, body {
   opacity: 0.8;
 }
 
+@media (max-width: 500px){
+  .portfolio-section .nav-link{
+    padding: 14px !important;
+  }
+}
+
 .header-social .nav-link {
   font-size: 1.25rem;
 }

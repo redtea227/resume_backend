@@ -12,8 +12,8 @@ if(isset($_FILES['img']['tmp_name'])){
 
     switch($_POST['table']){
         case "admin":
-            $data['acc']=$_POST['acc'];
-            $data['pw']=$_POST['pw'];
+          $data['acc']=$_POST['acc'];
+          $data['pw']=$_POST['pw'];
         break;
         case "skills":
           $data['name']=$_POST['name'];
