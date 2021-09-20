@@ -99,7 +99,8 @@
                           $icons = $Icon->all(['sh' => 1]);
                           foreach ($icons as $key => $value) {
                           ?>
-                            <li class="nav-item"><a class="nav-link" href="<?= $value['href']; ?>" target="_blank" title="<?= $value['name']; ?>"><i class="<?= $value['class']; ?>"></i><span class="menu-title sr-only"><?= $value['name']; ?></span></a>
+                            <li class="nav-item">
+                              <a class="nav-link" href="<?= $value['href']; ?>" target="_blank" title="<?= $value['name']; ?>"><i class="<?= $value['class']; ?>"></i></a>
                             </li>
                           <?php
                           }
@@ -344,7 +345,8 @@
               $icons = $Icon->all(['sh' => 1]);
               foreach ($icons as $key => $value) {
               ?>
-                <li class="nav-item"><a class="nav-link" href="<?= $value['href']; ?>" target="_blank" title="<?= $value['name']; ?>"><i class="<?= $value['class']; ?>"></i><span class="menu-title sr-only"><?= $value['name']; ?></span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?= $value['href']; ?>" target="_blank" title="<?= $value['name']; ?>"><i class="<?= $value['class']; ?>"></i></a>
                 </li>
               <?php
               }
@@ -361,7 +363,6 @@
     </div>
     <div id="rogerArrow" class="position-fixed">
       <a href="#" class="btn-i">
-        <!-- <i class="fab fa-btc fa-3x"></i> -->
         <i class="fas fa-arrow-up fa-3x"></i>
       </a>
     </div>
