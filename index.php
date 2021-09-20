@@ -184,7 +184,7 @@
                     <div><?= $value['content']; ?>
                       <?php
                       if ($value['name'] == "Tour Guide") {
-                        echo "<br><input type='button' class='btn btn-success' onclick='op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/carousel.php&#39;)' value='Feedback'>";
+                        echo "<br><input type='button' id='feedbackButton' class='btn btn-success' onclick='op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/carousel.php&#39;)' value='Feedback'>";
                       }
                       ?>
                     </div>

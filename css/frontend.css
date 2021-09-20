@@ -75,6 +75,9 @@
   .navbar-collapse>ul>li{
     margin-left: 0 !important;
   }
+  #feedbackButton{
+    display: none;
+  }
 }
 
 
