@@ -36,7 +36,7 @@ const spy = function () {
 </pre>
 • 訪客模式 disable submit button<br>
 <pre>
-  input type="submit" value="修改確定" class="btn btn-success <?=($_SESSION['login'] != 'roger')?'disabled':'';?>"
+  ($_SESSION['login'] != 'roger')?'disabled':'';
 </pre>
 • 後台切版 以do傳值帶入分類內容<br>
 <pre>
