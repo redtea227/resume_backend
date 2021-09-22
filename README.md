@@ -30,32 +30,29 @@ const spy = function () {
 <h3>後台技術</h3>
 • Session判斷登入導回首頁<br>
 <pre>
-if (!isset($_SESSION['login'])) {
+  if (!isset($_SESSION['login'])) {
   to("index.php");
 }
 </pre>
 • 訪客模式 disable submit button<br>
 <pre>
-<input type="submit" value="修改確定" class="btn btn-success <?=($_SESSION['login'] != 'roger')?'disabled':'';?>">
+  input type="submit" value="修改確定" class="btn btn-success <?=($_SESSION['login'] != 'roger')?'disabled':'';?>"
 </pre>
 • 後台切版 以do傳值帶入分類內容<br>
 <pre>
-<!--正中央-->
-        <?php
-        $do = (isset($_GET['do'])) ? $_GET['do'] : 'bg';
-        $file = "backend/" . $do . ".php";
-        // 先判斷檔案是否存在
-        if (file_exists($file)) {
-          include $file;
-        } else {
-          include "backend/bg.php";
-        }
-        ?>
+  $do = (isset($_GET['do'])) ? $_GET['do'] : 'bg';
+  $file = "backend/" . $do . ".php";
+  // 先判斷檔案是否存在
+  if (file_exists($file)) {
+    include $file;
+  } else {
+    include "backend/bg.php";
+  }
 </pre>
 • base檔整合資料庫CRUD操作<br>
 • Post表單加入input hidden判斷id/table<br>
 • 打字機內容json_encode回傳前端
 <pre>
-$ty=$Typewriter->find(['sh'=>1]);
-echo json_encode($ty);
+  $ty=$Typewriter->find(['sh'=>1]);
+  echo json_encode($ty);
 </pre>
