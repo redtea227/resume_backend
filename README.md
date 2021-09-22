@@ -4,6 +4,18 @@ Demo link http://220.128.133.15/s1100217/resume/
 <h3>前台技術</h3>
 • Boostrap5 RWD設計<br>
 • typewriter 打字機/aos.js 視覺滾差/slick 輪播js套件<br>
+<pre>
+  $.get('api/typewriter.php', (res) => {
+
+  typewriter
+    .pauseFor(200)
+    .typeString(`<span id='slogan'>${res.first}.</span>`)
+    .typeString(`<br><span style='font-size:37px;'>${res.second}</span><br><span>${res.third}</span>`)
+    .pauseFor(1000)
+    .start();
+
+}, 'JSON')
+</pre>
 • formspree表單功能<br>
 • spy()滾動軸監控搭配顯示效果<br>
 <pre>
