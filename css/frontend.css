@@ -12,7 +12,7 @@
 
 #coverr {
   width: 80%;
-  height: 85%;
+  height: 83%;
   position: absolute;
   z-index: 5;
   background: #ffffff;
@@ -368,7 +368,7 @@ footer a:not(.nav-link) {
 }
 
 .slick-prev {
-  left: -10%;
+  left: -13%;
   text-align: left;
 }
 
@@ -381,7 +381,7 @@ footer a:not(.nav-link) {
 
 .item.slick-slide {
   width: 700px;
-  height: 700px !important;
+  height: 550px !important;
   transition: transform .4s;
   position: relative;
 }

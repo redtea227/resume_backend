@@ -24,7 +24,7 @@
   <!-- modal點擊事件 -->
   <div id="cover" style="display:none; ">
     <div id="coverr">
-      <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')"><button type="button" class="btn-close bg-primary"></button></a>
+      <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')"><button type="button" class="btn-close bg-warning"></button></a>
       <div id="cvr" style="position:absolute; width:100%; height:100%; margin:auto; z-index:9898;"></div>
     </div>
   </div>
