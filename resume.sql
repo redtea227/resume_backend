@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-09-17 13:27:45
+-- 產生時間： 2021-10-12 18:32:32
 -- 伺服器版本： 10.4.18-MariaDB
 -- PHP 版本： 7.3.27
 
@@ -82,10 +82,10 @@ CREATE TABLE `experience` (
 --
 
 INSERT INTO `experience` (`id`, `name`, `company`, `time`, `content`, `sh`) VALUES
-(1, 'PHP資料庫網頁設計', 'at 泰山職訓局', '2021/03 - 2021/09 (6m)', '學習如何網頁排版、動態技術互動、資料庫規劃開發，更注重的是前後端實作整合應用<br>\r\n包含了SPA + API串接、Laravel framework技術操作<br>\r\n<br>\r\n•前端RWD切版boostrap5框架開發經驗<br>\r\n•Chart.js DataTables Moment.js等套件應用<br>\r\n•了解MVC架構開發 RESTful API運用<br>\r\n•基礎Git版本控制、npm套件管理程式', 1),
-(2, 'Tour Guide', 'at YOLO Taiwan', '2018/03 - 2020/03 (2y)', 'Tripadvisor、Viator、GetYourGuide旅遊合作平台，在地外語私人導遊，接待外籍國際旅客<br>\r\n結合在地觀光特色推廣歷史人文及美食文化<br>\r\n<br>\r\n•依客製化需求提前協調完成旅程規劃<br>\r\n•培養良好溝通技巧與情緒管理<br>\r\n•分析問題、解決問題的靈活應變能力<br>\r\n•以良好的工作熱忱獲得極高好評率', 1),
-(4, 'Field Application Engineer', 'at EDOM Technology', '2014/09 - 2016/05 (1y8m)', '負責Broadcom產品線代理，其內容為被動式光纖網路(GPON)和WIFI模組環境的架設與測試<br>\r\n綠色供應鏈品保業務窗口，熟悉國際相關綠色文件規範<br>\r\n<br>\r\n•能夠獨立作業及原廠客戶端溝通協調能力<br>\r\n•追蹤專案時程進度掌控<br>\r\n•協助業務團隊解決銷售過程中的技術問題及提供售後的技術支援<br>\r\n•產品安全規範文件的更新維護<br>\r\n•熟悉職場英文書信用語', 1),
-(5, '材料科學與工程學系畢業', 'at 國立東華大學', '2009 - 2013 (4y)', '主修金屬、陶瓷、電子半導體材料等之原理、製程與應用<br>\r\n<br>\r\n•運用數學、科學及材料工程知識<br>\r\n•設計與執行材料實驗及分析數據<br>\r\n•製程整合及元件實作<br>', 1);
+(1, 'PHP資料庫網頁設計', 'at 泰山職訓局', '2021/03 - 2021/09 (6m)', '• 前端RWD切版boostrap5框架開發經驗<br>\r\n• SPA + API串接前後端實作整合應用<br>\r\n• 基礎MVC架構開發 Laravel framework操作<br>\r\n• Git版本控制、RESTful API運用', 1),
+(2, 'Tour Guide', 'at YOLO Taiwan', '2018/03 - 2020/03 (2y)', '• Tripadvisor、Viator、GetYourGuide在地私導合作<br>\r\n• 客製化需求提前協調完成旅程規劃<br>\r\n• 宣傳在地觀光產業資源特色<br>\r\n• 絕佳旅客滿意度推動國民外交', 1),
+(4, 'Field Application Engineer', 'at EDOM Technology', '2014/09 - 2016/05 (1y8m)', '• Broadcom被動式光纖網路(GPON)環境架設<br>\r\n• SmartBits操作與Throughput Test <br>\r\n• 協助業務團隊解決銷售過程中的技術問題及提供售後的技術支援<br>\r\n• 追蹤專案時程進度掌控<br>\r\n• 綠色供應鏈品保文件更新維護', 1),
+(5, '材料科學與工程學系畢業', 'at 國立東華大學', '2009 - 2013 (4y)', '主修金屬、陶瓷、電子半導體材料等之原理、製程與應用<br>\r\n<br>\r\n•運用數學、科學及材料工程知識<br>\r\n•設計與執行材料實驗及分析數據<br>\r\n•製程整合及元件實作<br>', 0);
 
 -- --------------------------------------------------------
 
@@ -174,14 +174,15 @@ CREATE TABLE `portfolio` (
 --
 
 INSERT INTO `portfolio` (`id`, `type`, `img`, `href1`, `href2`, `subject`, `text`, `sh`) VALUES
-(1, 'frontend', 'frontend_walkingTrail.jpg', 'http://220.128.133.15/s1100217/portfolio/walkingTrail_api/', 'https://github.com/redtea227/OpenData-API_walkingTrail', '全台步道資訊網', '。使用 AJAX 與 open data api 串接應用<br>\r\n。Google Analytics 網站流量統計服務，分析使用者與網站互動數據<br>\r\n。運用 Chart.js DataTables 等套件效果<br>\r\n。RWD 響應式設計<br>', 1),
+(1, 'frontend', 'frontend_walkingTrail.jpg', 'http://220.128.133.15/s1100217/portfolio/walkingTrail_api/', 'https://github.com/redtea227/OpenData-API_walkingTrail', '全台步道資訊網', '。使用 AJAX 與 open data api 串接應用<br>\r\n。Google Analytics 網站流量統計服務，分析使用者與網站互動數據<br>\r\n。運用 Chart.js DataTables 等套件效果<br>\r\n。Boostrap5 gird排版/RWD 設計<br>', 1),
 (2, 'frontend', 'frontend_hamster.jpg', 'http://220.128.133.15/s1100217/portfolio/Hamster/', 'https://github.com/redtea227/Hamster_ninja', '打地鼠小遊戲', '。原生 JS 視覺互動<br>\r\n。settimeout, event, dom 的控制<br>\r\n。鍵盤事件的調整與控制', 1),
-(3, 'backend', 'backend_resume.jpg', '', 'https://github.com/redtea227/resume_backend', '後台履歷系統', '。後台 CMS 更新維護與前台串接<br>\r\n。PHP+MySQL 資料庫 CRUD 整合運用<br>\r\n。boostrap 5 套件美化介面<br>', 1),
-(5, 'backend', 'backend_bquiz02.jpg', 'http://220.128.133.15/s1100217/portfolio/web17/', 'https://github.com/redtea227/bquiz02', '健康資訊網', '。前端 JS 與後端 API 串接資料驗證<br>\r\n。PHP+MySQL 後台分類功能管理<br>\r\n。完整會員登入與問卷調查功能<br>', 1),
+(3, 'backend', 'backend_resume.jpg', '', 'https://github.com/redtea227/resume_backend', '履歷後台系統', '。後台 CMS 更新維護與前台串接<br>\r\n。PHP + MySQL 資料庫 CRUD 整合運用<br>\r\n。boostrap 5 套件美化介面<br>', 1),
+(5, 'backend', 'backend_bquiz02.jpg', 'http://220.128.133.15/s1100217/portfolio/web17/', 'https://github.com/redtea227/bquiz02', '健康資訊網', '。完整會員登入前後端驗證功能 JS + API<br>\r\n。PHP + MySQL 後台分類管理<br>\r\n。社群平台點讚互動與問卷調查功能<br>', 1),
 (6, 'backend', 'backend_calendar.jpg', 'http://220.128.133.15/s1100217/portfolio/calendar/', 'https://github.com/redtea227/calendar', '萬年曆', '。PHP date( ) mktime( ) 日期時間格式化<br>\r\n。自訂 data 屬性，結合 hover 顯示效果<br>', 1),
 (8, 'photo', 'photo_logoDesign.jpg', 'http://220.128.133.15/s1100217/portfolio/photo/photo_logoDesign.jpg', '', '個人logo設計', '', 1),
 (9, 'photo', 'photo_dm.jpg', 'http://220.128.133.15/s1100217/portfolio/photo/photo_dm.jpg', '', '旅遊DM', '', 1),
-(11, 'photo', 'photo_calendar.jpg', 'http://220.128.133.15/s1100217/portfolio/photo/photo_calendar.jpg', '', '牛年曆', '', 1);
+(11, 'photo', 'photo_calendar.jpg', 'http://220.128.133.15/s1100217/portfolio/photo/photo_calendar.jpg', '', '牛年曆', '', 1),
+(12, 'frontend', 'frontend_lineBot.jpg', 'https://github.com/redtea227/line-bot', 'https://github.com/redtea227/line-bot', 'LINE Messaging API Bot', '。Python Flask網頁應用框架<br>\r\n。Heroku雲端伺服器<br>\r\n。簡易對話貼圖回覆功能', 1);
 
 -- --------------------------------------------------------
 
@@ -338,7 +339,7 @@ ALTER TABLE `photo`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `skills`
